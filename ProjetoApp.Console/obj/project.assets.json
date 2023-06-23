@@ -1,0 +1,114 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "Projeto.Aplicacao/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Projeto.Dominio": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Projeto.Aplicacao.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Projeto.Aplicacao.dll": {}
+        }
+      },
+      "Projeto.Dominio/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Projeto.Dominio.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Projeto.Dominio.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Projeto.Aplicacao/1.0.0": {
+      "type": "project",
+      "path": "../Projeto.Aplicacao/Projeto.Aplicacao.csproj",
+      "msbuildProject": "../Projeto.Aplicacao/Projeto.Aplicacao.csproj"
+    },
+    "Projeto.Dominio/1.0.0": {
+      "type": "project",
+      "path": "../Projeto.Dominio/Projeto.Dominio.csproj",
+      "msbuildProject": "../Projeto.Dominio/Projeto.Dominio.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "Projeto.Aplicacao >= 1.0.0",
+      "Projeto.Dominio >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\LennonMartins\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\ProjetoApp.Console\\ProjetoApp.Console.csproj",
+      "projectName": "ProjetoApp.Console",
+      "projectPath": "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\ProjetoApp.Console\\ProjetoApp.Console.csproj",
+      "packagesPath": "C:\\Users\\LennonMartins\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\ProjetoApp.Console\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\LennonMartins\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://pkgs.dev.azure.com/solucoesdigix/Projetos/_packaging/Digix/nuget/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Aplicacao\\Projeto.Aplicacao.csproj": {
+              "projectPath": "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Aplicacao\\Projeto.Aplicacao.csproj"
+            },
+            "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Dominio\\Projeto.Dominio.csproj": {
+              "projectPath": "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Dominio\\Projeto.Dominio.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

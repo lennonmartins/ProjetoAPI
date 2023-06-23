@@ -1,0 +1,196 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.WebApi\\Projeto.WebApi.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Aplicacao\\Projeto.Aplicacao.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Aplicacao\\Projeto.Aplicacao.csproj",
+        "projectName": "Projeto.Aplicacao",
+        "projectPath": "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Aplicacao\\Projeto.Aplicacao.csproj",
+        "packagesPath": "C:\\Users\\LennonMartins\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Aplicacao\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\LennonMartins\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/solucoesdigix/Projetos/_packaging/Digix/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Dominio\\Projeto.Dominio.csproj": {
+                "projectPath": "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Dominio\\Projeto.Dominio.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Dominio\\Projeto.Dominio.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Dominio\\Projeto.Dominio.csproj",
+        "projectName": "Projeto.Dominio",
+        "projectPath": "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Dominio\\Projeto.Dominio.csproj",
+        "packagesPath": "C:\\Users\\LennonMartins\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Dominio\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\LennonMartins\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/solucoesdigix/Projetos/_packaging/Digix/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.WebApi\\Projeto.WebApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.WebApi\\Projeto.WebApi.csproj",
+        "projectName": "Projeto.WebApi",
+        "projectPath": "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.WebApi\\Projeto.WebApi.csproj",
+        "packagesPath": "C:\\Users\\LennonMartins\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.WebApi\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\LennonMartins\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/solucoesdigix/Projetos/_packaging/Digix/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Aplicacao\\Projeto.Aplicacao.csproj": {
+                "projectPath": "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Aplicacao\\Projeto.Aplicacao.csproj"
+              },
+              "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Dominio\\Projeto.Dominio.csproj": {
+                "projectPath": "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Dominio\\Projeto.Dominio.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
