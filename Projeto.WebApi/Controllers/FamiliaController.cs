@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Projeto.Aplicacao;
 using Projeto.Dominio;
+using Projeto.WebApi.DTOs;
 
 namespace Projeto.WebApi.Controllers
 {
@@ -12,7 +13,7 @@ namespace Projeto.WebApi.Controllers
 
 
         [HttpPost]
-        public IActionResult CadastrarFamilia()
+        public IActionResult CadastrarFamilia([FromBody] FamiliaRequestDto familiaRequestDto)
         {
             var nomeDoResponsavel = "Lennon";
             var telefone = "67 981373178";
@@ -20,7 +21,7 @@ namespace Projeto.WebApi.Controllers
             var rendaTotalDaFamilia = 1500;
             var quantidadeDeDependentes = 0;
 
-            var familiaCadastrada = cadastraFamiliaService.Cadastrarfamilia(nomeDoResponsavel,telefone,cpf,rendaTotalDaFamilia,quantidadeDeDependentes);
+            var familiaCadastrada = cadastraFamiliaService.Cadastrarfamilia(familiaRequestDto);
             return Ok(familiaCadastrada);
         }
     }
