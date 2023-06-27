@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Dominio\\Projeto.Dominio.csproj": {}
+    "C:\\Users\\LennonMartins\\Desktop\\Projeto\\ProjetoAPI\\Projeto.Dominio\\Projeto.Dominio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Dominio\\Projeto.Dominio.csproj": {
+    "C:\\Users\\LennonMartins\\Desktop\\Projeto\\ProjetoAPI\\Projeto.Dominio\\Projeto.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Dominio\\Projeto.Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\LennonMartins\\Desktop\\Projeto\\ProjetoAPI\\Projeto.Dominio\\Projeto.Dominio.csproj",
         "projectName": "Projeto.Dominio",
-        "projectPath": "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Dominio\\Projeto.Dominio.csproj",
+        "projectPath": "C:\\Users\\LennonMartins\\Desktop\\Projeto\\ProjetoAPI\\Projeto.Dominio\\Projeto.Dominio.csproj",
         "packagesPath": "C:\\Users\\LennonMartins\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Dominio\\obj\\",
+        "outputPath": "C:\\Users\\LennonMartins\\Desktop\\Projeto\\ProjetoAPI\\Projeto.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\LennonMartins\\AppData\\Roaming\\NuGet\\NuGet.Config",
