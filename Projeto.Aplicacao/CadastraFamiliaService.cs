@@ -1,5 +1,6 @@
 ﻿using Projeto.Aplicacao.DTOs;
 using Projeto.Dominio;
+using Projeto.WebApi.Mapeadores;
 
 namespace Projeto.Aplicacao
 {
@@ -7,13 +8,8 @@ namespace Projeto.Aplicacao
     {        
         public Familia Cadastrarfamilia(FamiliaRequestDto familiaRequestDto)
         {
-            return new Familia(
-                familiaRequestDto.NomeDoResponsavel,
-                familiaRequestDto.Telefone, 
-                familiaRequestDto.CPF, 
-                familiaRequestDto.RendaTotalDaFamilia, 
-                familiaRequestDto.QuantidadeDeDependentes
-                );
+            var familia = MapeadorDeFamilia.MapearFamiliaRequest(familiaRequestDto);
+            return familia;
         }
     }
 }

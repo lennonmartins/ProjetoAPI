@@ -51,11 +51,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LennonMartins\\Desktop\\Projeto\\ProjetoAPI\\ProjetoApp.Console\\ProjetoApp.Console.csproj",
+      "projectUniqueName": "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\ProjetoApp.Console\\ProjetoApp.Console.csproj",
       "projectName": "ProjetoApp.Console",
-      "projectPath": "C:\\Users\\LennonMartins\\Desktop\\Projeto\\ProjetoAPI\\ProjetoApp.Console\\ProjetoApp.Console.csproj",
+      "projectPath": "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\ProjetoApp.Console\\ProjetoApp.Console.csproj",
       "packagesPath": "C:\\Users\\LennonMartins\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LennonMartins\\Desktop\\Projeto\\ProjetoAPI\\ProjetoApp.Console\\obj\\",
+      "outputPath": "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\ProjetoApp.Console\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\LennonMartins\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -73,11 +73,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\LennonMartins\\Desktop\\Projeto\\ProjetoAPI\\Projeto.Aplicacao\\Projeto.Aplicacao.csproj": {
-              "projectPath": "C:\\Users\\LennonMartins\\Desktop\\Projeto\\ProjetoAPI\\Projeto.Aplicacao\\Projeto.Aplicacao.csproj"
+            "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Aplicacao\\Projeto.Aplicacao.csproj": {
+              "projectPath": "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Aplicacao\\Projeto.Aplicacao.csproj"
             },
-            "C:\\Users\\LennonMartins\\Desktop\\Projeto\\ProjetoAPI\\Projeto.Dominio\\Projeto.Dominio.csproj": {
-              "projectPath": "C:\\Users\\LennonMartins\\Desktop\\Projeto\\ProjetoAPI\\Projeto.Dominio\\Projeto.Dominio.csproj"
+            "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Dominio\\Projeto.Dominio.csproj": {
+              "projectPath": "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Dominio\\Projeto.Dominio.csproj"
             }
           }
         }
