@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Infra\\Projeto.Infra.csproj": {}
+    "C:\\Users\\LennonMartins\\Desktop\\Projeto\\ProjetoAPI\\Projeto.Infra\\Projeto.Infra.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Infra\\Projeto.Infra.csproj": {
+    "C:\\Users\\LennonMartins\\Desktop\\Projeto\\ProjetoAPI\\Projeto.Infra\\Projeto.Infra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Infra\\Projeto.Infra.csproj",
+        "projectUniqueName": "C:\\Users\\LennonMartins\\Desktop\\Projeto\\ProjetoAPI\\Projeto.Infra\\Projeto.Infra.csproj",
         "projectName": "Projeto.Infra",
-        "projectPath": "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Infra\\Projeto.Infra.csproj",
+        "projectPath": "C:\\Users\\LennonMartins\\Desktop\\Projeto\\ProjetoAPI\\Projeto.Infra\\Projeto.Infra.csproj",
         "packagesPath": "C:\\Users\\LennonMartins\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Infra\\obj\\",
+        "outputPath": "C:\\Users\\LennonMartins\\Desktop\\Projeto\\ProjetoAPI\\Projeto.Infra\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\LennonMartins\\AppData\\Roaming\\NuGet\\NuGet.Config",
