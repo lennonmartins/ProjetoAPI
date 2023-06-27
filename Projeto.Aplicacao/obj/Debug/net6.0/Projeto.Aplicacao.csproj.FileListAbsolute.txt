@@ -2,7 +2,9 @@ C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.Aplicacao\bin\Debug\ne
 C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.Aplicacao\bin\Debug\net6.0\Projeto.Aplicacao.dll
 C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.Aplicacao\bin\Debug\net6.0\Projeto.Aplicacao.pdb
 C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.Aplicacao\bin\Debug\net6.0\Projeto.Dominio.dll
+C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.Aplicacao\bin\Debug\net6.0\Projeto.Infra.dll
 C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.Aplicacao\bin\Debug\net6.0\Projeto.Dominio.pdb
+C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.Aplicacao\bin\Debug\net6.0\Projeto.Infra.pdb
 C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.Aplicacao\obj\Debug\net6.0\Projeto.Aplicacao.csproj.AssemblyReference.cache
 C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.Aplicacao\obj\Debug\net6.0\Projeto.Aplicacao.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.Aplicacao\obj\Debug\net6.0\Projeto.Aplicacao.AssemblyInfoInputs.cache

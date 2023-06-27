@@ -2,6 +2,8 @@
 {
     public class Familia
     {
+        private int _id;
+        public int Id { get { return _id; } } 
         public string NomeDoResponsavel { get; private set; }
         public string Telefone { get; private set; }    
         public string CPF { get; private set; }

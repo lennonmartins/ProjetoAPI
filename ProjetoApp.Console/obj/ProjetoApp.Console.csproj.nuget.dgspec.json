@@ -31,6 +31,9 @@
             "projectReferences": {
               "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Dominio\\Projeto.Dominio.csproj": {
                 "projectPath": "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Dominio\\Projeto.Dominio.csproj"
+              },
+              "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Infra\\Projeto.Infra.csproj": {
+                "projectPath": "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Infra\\Projeto.Infra.csproj"
               }
             }
           }
@@ -100,6 +103,80 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Infra\\Projeto.Infra.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Infra\\Projeto.Infra.csproj",
+        "projectName": "Projeto.Infra",
+        "projectPath": "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Infra\\Projeto.Infra.csproj",
+        "packagesPath": "C:\\Users\\LennonMartins\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Infra\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\LennonMartins\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/solucoesdigix/Projetos/_packaging/Digix/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Dominio\\Projeto.Dominio.csproj": {
+                "projectPath": "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Dominio\\Projeto.Dominio.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "FluentNHibernate": {
+              "target": "Package",
+              "version": "[3.2.1, )"
+            },
+            "NHibernate": {
+              "target": "Package",
+              "version": "[5.4.2, )"
+            },
+            "StructureMap": {
+              "target": "Package",
+              "version": "[4.7.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

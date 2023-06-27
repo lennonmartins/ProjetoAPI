@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Projeto.Dominio
+﻿namespace Projeto.Dominio
 {
-    internal interface IFamiliaRepositorio
+    public interface IFamiliaRepositorio
     {
+        void Salvar(Familia familia);
     }
 }

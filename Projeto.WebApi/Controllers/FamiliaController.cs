@@ -9,12 +9,17 @@ namespace Projeto.WebApi.Controllers
     [Route("[controller]")]
     public class FamiliaController : ControllerBase
     {
-        readonly CadastraFamiliaService cadastraFamiliaService = new();
+        readonly CadastraFamiliaService _cadastraFamiliaService;
+
+        public FamiliaController(CadastraFamiliaService cadastraFamiliaService)
+        {
+            _cadastraFamiliaService = cadastraFamiliaService;
+        }
 
         [HttpPost]
         public IActionResult CadastrarFamilia([FromBody] FamiliaRequestDto familiaRequestDto)
         {
-            var familiaCadastrada = cadastraFamiliaService.Cadastrarfamilia(familiaRequestDto);
+            var familiaCadastrada = _cadastraFamiliaService.Cadastrarfamilia(familiaRequestDto);
             return Ok(familiaCadastrada);
         }
     }
