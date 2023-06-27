@@ -1,14 +1,19 @@
-﻿using Projeto.Dominio;
+﻿using Projeto.Aplicacao.DTOs;
+using Projeto.Dominio;
 
 namespace Projeto.Aplicacao
 {
     public class CadastraFamiliaService
     {        
-        public Familia Cadastrarfamilia(string nomeDoResponsavel, string telefone, string cpf, decimal rendaTotalDaFamilia, int quantidadeDeDepedentes)
+        public Familia Cadastrarfamilia(FamiliaRequestDto familiaRequestDto)
         {
-            
-            Familia famiia = new(nomeDoResponsavel, telefone, cpf, rendaTotalDaFamilia, quantidadeDeDepedentes);
-            return famiia;
+            return new Familia(
+                familiaRequestDto.NomeDoResponsavel,
+                familiaRequestDto.Telefone, 
+                familiaRequestDto.CPF, 
+                familiaRequestDto.RendaTotalDaFamilia, 
+                familiaRequestDto.QuantidadeDeDependentes
+                );
         }
     }
 }

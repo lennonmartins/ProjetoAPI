@@ -1,4 +1,4 @@
-﻿namespace Projeto.WebApi.DTOs
+﻿namespace Projeto.Aplicacao.DTOs
 {
     public class FamiliaRequestDto
     {

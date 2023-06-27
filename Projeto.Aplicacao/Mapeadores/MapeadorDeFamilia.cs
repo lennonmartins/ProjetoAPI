@@ -1,5 +1,5 @@
 ﻿using Projeto.Dominio;
-using Projeto.WebApi.DTOs;
+using Projeto.Aplicacao.DTOs;
 
 namespace Projeto.WebApi.Mapeadores
 {
