@@ -1,19 +1,22 @@
-﻿using Projeto.Aplicacao.DTOs;
+﻿using AutoMapper;
+using Projeto.Aplicacao.Controllers;
+using Projeto.Aplicacao.DTOs;
 using Projeto.Dominio;
-using Projeto.Infra;
-using Projeto.WebApi.Mapeadores;
 
 namespace Projeto.Aplicacao
 {
-    public class CadastraFamiliaService
+    public class CadastraFamiliaService : ICadastraFamilia
     {
         private readonly IFamiliaRepositorio _familiaRepositorio;
-        public CadastraFamiliaService(IFamiliaRepositorio familiaRepositorio) { 
+        private readonly IMapper _mapper;
+        public CadastraFamiliaService(IFamiliaRepositorio familiaRepositorio, IMapper mapper) { 
             _familiaRepositorio = familiaRepositorio;
+            _mapper = mapper;
         }
         public Familia Cadastrarfamilia(FamiliaRequestDto familiaRequestDto)
         {
-            var familia = MapeadorDeFamilia.MapearFamiliaRequest(familiaRequestDto);
+            /*var familia = MapeadorDeFamilia.MapearFamiliaRequest(familiaRequestDto);*/
+            var familia = _mapper.Map<Familia>(familiaRequestDto);
             _familiaRepositorio.Salvar(familia);
             return familia;
         }

@@ -2,6 +2,7 @@
 using Projeto.Aplicacao;
 using Projeto.Dominio;
 using Projeto.Aplicacao.DTOs;
+using Projeto.Aplicacao.Controllers;
 
 namespace Projeto.WebApi.Controllers
 {
@@ -9,17 +10,17 @@ namespace Projeto.WebApi.Controllers
     [Route("[controller]")]
     public class FamiliaController : ControllerBase
     {
-        readonly CadastraFamiliaService _cadastraFamiliaService;
+        readonly ICadastraFamilia _cadastraFamilia;
 
-        public FamiliaController(CadastraFamiliaService cadastraFamiliaService)
+        public FamiliaController(ICadastraFamilia cadastraFamilia)
         {
-            _cadastraFamiliaService = cadastraFamiliaService;
+            _cadastraFamilia = cadastraFamilia;
         }
 
         [HttpPost]
         public IActionResult CadastrarFamilia([FromBody] FamiliaRequestDto familiaRequestDto)
         {
-            var familiaCadastrada = _cadastraFamiliaService.Cadastrarfamilia(familiaRequestDto);
+            var familiaCadastrada = _cadastraFamilia.Cadastrarfamilia(familiaRequestDto);
             return Ok(familiaCadastrada);
         }
     }

@@ -4,8 +4,13 @@ C:\Users\LennonMartins\source\repos\ProjetoLennon\ProjetoApp.Console\bin\Debug\n
 C:\Users\LennonMartins\source\repos\ProjetoLennon\ProjetoApp.Console\bin\Debug\net6.0\ProjetoApp.Console.dll
 C:\Users\LennonMartins\source\repos\ProjetoLennon\ProjetoApp.Console\bin\Debug\net6.0\ProjetoApp.Console.pdb
 C:\Users\LennonMartins\source\repos\ProjetoLennon\ProjetoApp.Console\bin\Debug\net6.0\Antlr3.Runtime.dll
+C:\Users\LennonMartins\source\repos\ProjetoLennon\ProjetoApp.Console\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\LennonMartins\source\repos\ProjetoLennon\ProjetoApp.Console\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\LennonMartins\source\repos\ProjetoLennon\ProjetoApp.Console\bin\Debug\net6.0\FluentNHibernate.dll
 C:\Users\LennonMartins\source\repos\ProjetoLennon\ProjetoApp.Console\bin\Debug\net6.0\Iesi.Collections.dll
+C:\Users\LennonMartins\source\repos\ProjetoLennon\ProjetoApp.Console\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\LennonMartins\source\repos\ProjetoLennon\ProjetoApp.Console\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\LennonMartins\source\repos\ProjetoLennon\ProjetoApp.Console\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
 C:\Users\LennonMartins\source\repos\ProjetoLennon\ProjetoApp.Console\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\LennonMartins\source\repos\ProjetoLennon\ProjetoApp.Console\bin\Debug\net6.0\NHibernate.dll
 C:\Users\LennonMartins\source\repos\ProjetoLennon\ProjetoApp.Console\bin\Debug\net6.0\Remotion.Linq.dll

@@ -19,10 +19,10 @@ namespace Projeto.Infra
                 _session.Save(familia);
                 transacao.Commit();
             }
-            catch
+            catch(Exception ex)
             {
                 transacao.Rollback();
-                throw new NotImplementedException();
+                throw ;
             }
         }
     }

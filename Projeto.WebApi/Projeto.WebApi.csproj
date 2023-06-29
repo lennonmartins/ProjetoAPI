@@ -7,12 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Autofac" Version="7.0.1" />
+    <PackageReference Include="NHibernate" Version="5.4.2" />
+    <PackageReference Include="StructureMap" Version="4.7.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Projeto.Aplicacao\Projeto.Aplicacao.csproj" />
     <ProjectReference Include="..\Projeto.Dominio\Projeto.Dominio.csproj" />
+    <ProjectReference Include="..\Projeto.Infra\Projeto.Infra.csproj" />
   </ItemGroup>
 
 </Project>

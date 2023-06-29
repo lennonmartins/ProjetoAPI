@@ -3,12 +3,12 @@
     public class Familia
     {
         private int _id;
-        public int Id { get { return _id; } } 
-        public string NomeDoResponsavel { get; private set; }
-        public string Telefone { get; private set; }    
-        public string CPF { get; private set; }
-        public decimal RendaTotalDaFamilia { get; private set; }
-        public int QuantidadeDeDependentes { get; private set; }
+        public virtual int Id { get { return _id; } } 
+        public virtual string NomeDoResponsavel { get; protected set; }
+        public virtual string Telefone { get; protected set; }    
+        public virtual string CPF { get; protected set; }
+        public virtual decimal RendaTotalDaFamilia { get; protected set; }
+        public virtual int QuantidadeDeDependentes { get; protected set; }
 
         public Familia(string nomeDoResponsavel, string telefone, string cpf, decimal rendaTotalDaFamilia, int quantidadeDeDependentes)
         {
@@ -21,6 +21,8 @@
             RendaTotalDaFamilia = rendaTotalDaFamilia;
             QuantidadeDeDependentes = quantidadeDeDependentes;
         }
+
+        protected Familia() { }
 
         private void ValidarNomeVazioOuNulo(string nome)
         {
