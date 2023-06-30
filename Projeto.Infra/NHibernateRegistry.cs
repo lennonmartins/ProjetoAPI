@@ -33,17 +33,7 @@ namespace Projeto.Infra
                     .Mappings(c => c.FluentMappings.AddFromAssemblyOf<FamiliaMap>())
                     .ExposeConfiguration(configuracao => configuracao.SetProperty("current_session_context_class", "thread_static"))
                     .BuildSessionFactory();
-            
 
-            /*var connStr = Configuration.GetConnectionString("DefaultConnection");
-            var _sessionFactory = Fluently.Configure()
-                                      .Database(MsSqlConfiguration.MsSql2012.ConnectionString(connStr))
-                                      .Mappings(m => m.FluentMappings.AddFromAssembly(GetType().Assembly))
-                                      .BuildSessionFactory();
-            services.AddScoped(factory =>
-            {
-                return _sessionFactory.OpenSession();
-            });*/
         }
 
         public void Dispose()
