@@ -11,7 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjetoApp.Console", "Proje
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Projeto.Infra", "Projeto.Infra\Projeto.Infra.csproj", "{F08140E5-E3FE-4786-A622-799FCEED8C9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projeto.WebApi", "Projeto.WebApi\Projeto.WebApi.csproj", "{F0137302-EADC-4C84-BDF3-1121BCF9BE3C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Projeto.WebApi", "Projeto.WebApi\Projeto.WebApi.csproj", "{F0137302-EADC-4C84-BDF3-1121BCF9BE3C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testes", "Testes", "{D5097319-572E-48AF-B9E2-FF7A876F5C0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projeto.TestesDeUnidade", "LennonProjeto.TestesDeUnidade\Projeto.TestesDeUnidade.csproj", "{C1ECC79C-EB05-46FF-8974-5E72C0240924}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,9 +43,16 @@ Global
 		{F0137302-EADC-4C84-BDF3-1121BCF9BE3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F0137302-EADC-4C84-BDF3-1121BCF9BE3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F0137302-EADC-4C84-BDF3-1121BCF9BE3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1ECC79C-EB05-46FF-8974-5E72C0240924}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1ECC79C-EB05-46FF-8974-5E72C0240924}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1ECC79C-EB05-46FF-8974-5E72C0240924}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1ECC79C-EB05-46FF-8974-5E72C0240924}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C1ECC79C-EB05-46FF-8974-5E72C0240924} = {D5097319-572E-48AF-B9E2-FF7A876F5C0C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7C4D7A7F-BD10-449B-947F-F09B9FEFD29E}

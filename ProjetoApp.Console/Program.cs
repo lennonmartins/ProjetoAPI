@@ -7,7 +7,7 @@ class Program
     {
        /* CadastraFamiliaService cadastraFamiliaService = new CadastraFamiliaService();*/
 
-        Console.WriteLine("Informe o nome do responsável: ");
+     /*   Console.WriteLine("Informe o nome do responsável: ");
         string nomeDoResponsavel = Console.ReadLine();
 
         Console.WriteLine("Informe o Telefone ");
@@ -21,6 +21,8 @@ class Program
 
         Console.WriteLine("Informe a quantidade de dependentes: ");
         int quantidadeDeDepedentes = int.Parse(Console.ReadLine());
+*/
+        Console.WriteLine(System.AppDomain.CurrentDomain.BaseDirectory.ToString());
 
         /*Familia familiaCadastrada = cadastraFamiliaService.Cadastrarfamilia(nomeDoResponsavel, telefone, cpf, rendaTotalDaFamilia, quantidadeDeDepedentes);
 

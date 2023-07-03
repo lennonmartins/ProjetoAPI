@@ -1,11 +1,12 @@
 using Autofac;
+using FluentMigrator.Runner;
 using FluentNHibernate.Cfg;
 using Projeto.Aplicacao;
 using Projeto.Aplicacao.Controllers;
 using Projeto.Dominio;
 using Projeto.Infra;
 using Projeto.WebApi.AutoMapper;
-using System;
+using System.Reflection;
 
 public class Program
 {
@@ -56,64 +57,24 @@ public class Program
             .ExposeConfiguration(cfg => cfg.SetProperty("current_session_context_class", "web"))
             .BuildSessionFactory();
 
+        var serviceProvider = new ServiceCollection()
+            .AddFluentMigratorCore()
+            .ConfigureRunner(rb => rb
+                .AddSqlServer2012()
+                .WithGlobalConnectionString(connStr)
+                .ScanIn(Assembly.LoadFrom(@"bin\Debug\net6.0\Projeto.Infra.dll")).For.Migrations())
+            .AddLogging(lb => lb.AddFluentMigratorConsole())
+            .BuildServiceProvider();
+
+        var runner = serviceProvider.GetRequiredService<IMigrationRunner>();
+        runner.MigrateUp();
+        
         services.AddScoped(factory => sessionFactory.OpenSession());
         services.AddSingleton(sessionFactory);
-
-       
         services.AddScoped<IFamiliaRepositorio, FamiliaRepositorio>();
         services.AddScoped<ICadastraFamilia, CadastraFamiliaService>();
         services.AddAutoMapper(typeof(AutoMapperProfile));
+
     }
 }
-
-
-/*
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
-var construtor = new ContainerBuilder();
-
-*//*var NHibernateRegistry = new NHibernateRegistry();
-
-construtor.Register(c => NHibernateRegistry.ObterSessionFactory()).As<ISessionFactory>().SingleInstance();
-
-construtor.Register(x => x.Resolve<ISessionFactory>().OpenSession())
-    .As<NHibernate.ISession>()
-    .InstancePerLifetimeScope();
-
-construtor.Register(c => new NHibernateRegistry()).As<Registry>();
- construtor.Build();
-*/
-/*builder.Services.AddScoped<NHibernate.ISession, NHibernate.Session>();*//*
-
-
-builder.Services.AddScoped<IFamiliaRepositorio, FamiliaRepositorio>();
-builder.Services.AddScoped<ICadastraFamilia, CadastraFamiliaService>();
-
-builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
-
-var app = builder.Build();
-
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
-app.MapControllers();
-
-app.Run();*/
-
 

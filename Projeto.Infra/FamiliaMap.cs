@@ -14,7 +14,7 @@ namespace Projeto.Infra
 
             Map(familia => familia.NomeDoResponsavel);
             Map(familia => familia.Telefone);
-            Map(familia => familia.CPF);
+            Map(familia => familia.Cpf_responsavel);
             Map(familia => familia.RendaTotalDaFamilia);
             Map(familia => familia.QuantidadeDeDependentes);
         }
