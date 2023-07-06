@@ -1,4 +1,5 @@
 ﻿using NHibernate;
+using NHibernate.Util;
 using Projeto.Dominio;
 
 namespace Projeto.Infra
@@ -11,6 +12,12 @@ namespace Projeto.Infra
         {
             _session = session;
         }
+
+        public IEnumerable<Familia> BuscarTodos()
+        {
+            yield return _session.Query<Familia>().First();
+        }
+
         public void Salvar(Familia familia)
         {
             using (var transacao = _session.BeginTransaction())

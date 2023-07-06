@@ -1,7 +1,7 @@
 ﻿using Projeto.Aplicacao.DTOs;
 using Projeto.Dominio;
 
-namespace Projeto.Aplicacao.Controllers
+namespace Projeto.Aplicacao.RegistroFamilia
 {
     public interface ICadastraFamilia
     {

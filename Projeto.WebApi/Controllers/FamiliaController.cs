@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Projeto.Aplicacao;
-using Projeto.Dominio;
 using Projeto.Aplicacao.DTOs;
-using Projeto.Aplicacao.Controllers;
+using Projeto.Aplicacao.RegistroFamilia;
 
 namespace Projeto.WebApi.Controllers
 {

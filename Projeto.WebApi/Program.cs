@@ -1,8 +1,7 @@
 using Autofac;
 using FluentMigrator.Runner;
 using FluentNHibernate.Cfg;
-using Projeto.Aplicacao;
-using Projeto.Aplicacao.Controllers;
+using Projeto.Aplicacao.RegistroFamilia;
 using Projeto.Dominio;
 using Projeto.Infra;
 using Projeto.WebApi.AutoMapper;

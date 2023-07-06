@@ -1,15 +1,15 @@
 ﻿using AutoMapper;
-using Projeto.Aplicacao.Controllers;
 using Projeto.Aplicacao.DTOs;
 using Projeto.Dominio;
 
-namespace Projeto.Aplicacao
+namespace Projeto.Aplicacao.RegistroFamilia
 {
     public class CadastraFamiliaService : ICadastraFamilia
-    {
+    {  
         private readonly IFamiliaRepositorio _familiaRepositorio;
         private readonly IMapper _mapper;
-        public CadastraFamiliaService(IFamiliaRepositorio familiaRepositorio, IMapper mapper) { 
+        public CadastraFamiliaService(IFamiliaRepositorio familiaRepositorio, IMapper mapper)
+        {
             _familiaRepositorio = familiaRepositorio;
             _mapper = mapper;
         }
