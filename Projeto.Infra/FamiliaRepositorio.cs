@@ -13,9 +13,9 @@ namespace Projeto.Infra
             _session = session;
         }
 
-        public IEnumerable<Familia> BuscarTodos()
+        public Familia BuscarTodos()
         {
-            yield return _session.Query<Familia>().First();
+             return _session.Query<Familia>().FirstOrDefault();
         }
 
         public void Salvar(Familia familia)

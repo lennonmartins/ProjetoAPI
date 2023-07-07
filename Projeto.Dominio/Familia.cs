@@ -9,6 +9,7 @@
         public virtual string Cpf_responsavel { get; protected set; }
         public virtual decimal RendaTotalDaFamilia { get; protected set; }
         public virtual int QuantidadeDeDependentes { get; protected set; }
+        public virtual int Pontos { get; protected set; }   
 
         public Familia(string nomeDoResponsavel, string telefone, string cpf, decimal rendaTotalDaFamilia, int quantidadeDeDependentes)
         {
@@ -46,6 +47,11 @@
             {
                 throw new ArgumentException("Responsável deve conter um CPF para registro.");
             }
+        }
+
+        public virtual void AdicionarPontos(int pontos)
+        {
+            this.Pontos = pontos;   
         }
     }
 }

@@ -9,7 +9,7 @@ namespace Projeto.Aplicacao.Servicos
             validacoes = validaCriteriosAtendidos;
         }
 
-        public  void  resultado(Familia familia)
+        public void resultado(Familia familia)
         {
             foreach ( var criterio in validacoes )
             {

@@ -2,15 +2,20 @@
 
 namespace Projeto.Aplicacao.Servicos
 {
-    public class PontuaFamilia
+    public class PontuaFamilia : IPontuaFamilia
     {
-        private readonly Criterios validacoes;
         private readonly IFamiliaRepositorio _familiaRepositorio;
+        private readonly Criterios validacoes;
         private readonly List<IValidaCriteriosAtendidos> criterios = new()
         {
             new CriterioQuantidadeDeDependentes(),
             new CriterioRenda(),
         };
+        public PontuaFamilia(IFamiliaRepositorio familiaRepositorio, Criterios criterios)
+        {
+            _familiaRepositorio = familiaRepositorio;
+            validacoes = criterios;
+        }
 
         public Familia PontuarFamiliaPelosCriteriosAtendidos()
         {
@@ -20,9 +25,9 @@ namespace Projeto.Aplicacao.Servicos
             return familiaRetornada;
         }
 
-        private Familia buscarFamilia()
+        private Familia? buscarFamilia()
         {
-            return _familiaRepositorio.BuscarTodos() as Familia;
+            return _familiaRepositorio.BuscarTodos();
         }
     }
 }

@@ -6,7 +6,14 @@ namespace Projeto.Aplicacao.Servicos
     {
         public void ValidarCriteriosAtendidos(Familia familia)
         {
-            throw new NotImplementedException();
+            if (familia.RendaTotalDaFamilia > 900 && familia.RendaTotalDaFamilia <= 1500)
+            {
+                familia.AdicionarPontos(3);
+            }
+            if (familia.RendaTotalDaFamilia <= 900)
+            {
+                familia.AdicionarPontos(5);
+            }
         }
     }
 }

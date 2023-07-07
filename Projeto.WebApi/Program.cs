@@ -2,6 +2,7 @@ using Autofac;
 using FluentMigrator.Runner;
 using FluentNHibernate.Cfg;
 using Projeto.Aplicacao.RegistroFamilia;
+using Projeto.Aplicacao.Servicos;
 using Projeto.Dominio;
 using Projeto.Infra;
 using Projeto.WebApi.AutoMapper;
@@ -22,9 +23,12 @@ public class Program
 
         var construtor = new ContainerBuilder();
 
+       /* builder.Services.AddTransient<IFamiliaRepositorio, FamiliaRepositorio>();*/
+
         builder.Services.AddScoped<IFamiliaRepositorio, FamiliaRepositorio>();
         builder.Services.AddScoped<ICadastraFamilia, CadastraFamiliaService>();
-
+/*        builder.Services.AddScoped<IPontuaFamilia, PontuaFamilia>();
+*/
         builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 
         var app = builder.Build();
@@ -72,6 +76,8 @@ public class Program
         services.AddSingleton(sessionFactory);
         services.AddScoped<IFamiliaRepositorio, FamiliaRepositorio>();
         services.AddScoped<ICadastraFamilia, CadastraFamiliaService>();
+        services.AddScoped<Criterios>();
+        services.AddScoped<IPontuaFamilia, PontuaFamilia>();
         services.AddAutoMapper(typeof(AutoMapperProfile));
 
     }
