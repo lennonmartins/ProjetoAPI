@@ -31,7 +31,5 @@ namespace Projeto.WebApi.Controllers
             var familiaPontuadaRetornada = _pontuaFamilia.PontuarFamiliaPelosCriteriosAtendidos();
             return Ok(new { NomeDoResponsavel = familiaPontuadaRetornada.NomeDoResponsavel, Pontos = familiaPontuadaRetornada.Pontos });
         }
-
-
     }
 }
