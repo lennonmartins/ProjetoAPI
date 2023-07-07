@@ -6,14 +6,16 @@ namespace Projeto.Aplicacao.Servicos
     {
         public void ValidarCriteriosAtendidos(Familia familia)
         {
+            int pontos = 0;
             if (familia.QuantidadeDeDependentes >= 3 )
             {
-                familia.AdicionarPontos(3);
+                pontos = 3;
             }
             if (familia.QuantidadeDeDependentes >= 1)
             {
-                familia.AdicionarPontos(2);
+                pontos = 2;
             }
+            familia.AdicionarPontos(pontos);
         }
     }
 }

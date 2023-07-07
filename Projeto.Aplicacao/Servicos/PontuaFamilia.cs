@@ -19,13 +19,13 @@ namespace Projeto.Aplicacao.Servicos
 
         public Familia PontuarFamiliaPelosCriteriosAtendidos()
         {
-            Familia familiaRetornada = buscarFamilia();
-            validacoes.setarCriterios(criterios);
-            validacoes.resultado(familiaRetornada);
+            Familia familiaRetornada = BuscarFamilia();
+            validacoes.SetarCriterios(criterios);
+            validacoes.Resultado(familiaRetornada);
             return familiaRetornada;
         }
 
-        private Familia? buscarFamilia()
+        private Familia BuscarFamilia()
         {
             return _familiaRepositorio.BuscarTodos();
         }
