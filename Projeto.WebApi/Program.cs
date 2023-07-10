@@ -1,7 +1,4 @@
-using Autofac;
 using FluentMigrator.Runner;
-using FluentNHibernate.Cfg;
-using Microsoft.AspNetCore.Mvc.Routing;
 using Projeto.Aplicacao.RegistroFamilia;
 using Projeto.Aplicacao.ServicoDePontuacao;
 using Projeto.Dominio;
@@ -14,23 +11,22 @@ public class Program
     public static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
-        ConfigureNHibernate(builder.Services);
+        ConfigurarMigracao(builder.Services);
 
         // Add services to the container.
-       
+
         builder.Services.AddControllers();
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
 
-        var construtor = new ContainerBuilder();
-
-       /* builder.Services.AddTransient<IFamiliaRepositorio, FamiliaRepositorio>();*/
+        NHibernateRegistry.ObterSessionFactory(builder.Services);
 
         builder.Services.AddScoped<IFamiliaRepositorio, FamiliaRepositorio>();
         builder.Services.AddScoped<ICadastraFamilia, CadastraFamiliaService>();
-/*        builder.Services.AddScoped<IPontuaFamilia, PontuaFamilia>();
-*/
+        builder.Services.AddScoped<GerenciadorDeCriterios>();
+        builder.Services.AddScoped<ValidacaoDeCriteriosAtendidos>();
+        builder.Services.AddScoped<IPontuaFamilia, PontuaFamilia>();
         builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 
         var app = builder.Build();
@@ -51,16 +47,9 @@ public class Program
         app.Run();
     }
 
-    private static void ConfigureNHibernate(IServiceCollection services)
+    private static void ConfigurarMigracao(IServiceCollection services)
     {
-        // Configuração do NHibernate
         var connStr = @"Server=localhost;Database=ProjetoLennon;User Id=sa;Password=PapelZero.123;";
-
-        var sessionFactory = Fluently.Configure()
-            .Database(FluentNHibernate.Cfg.Db.MsSqlConfiguration.MsSql2012.ConnectionString(connStr))
-            .Mappings(m => m.FluentMappings.AddFromAssemblyOf<FamiliaMap>())
-            .ExposeConfiguration(cfg => cfg.SetProperty("current_session_context_class", "web"))
-            .BuildSessionFactory();
 
         var serviceProvider = new ServiceCollection()
             .AddFluentMigratorCore()
@@ -73,15 +62,6 @@ public class Program
 
         var runner = serviceProvider.GetRequiredService<IMigrationRunner>();
         runner.MigrateUp();
-        
-        services.AddScoped(factory => sessionFactory.OpenSession());
-        services.AddSingleton(sessionFactory);
-        services.AddScoped<IFamiliaRepositorio, FamiliaRepositorio>();
-        services.AddScoped<ICadastraFamilia, CadastraFamiliaService>();
-        services.AddScoped<GerenciadorDeCriterios>();
-        services.AddScoped<ValidacaoDeCriteriosAtendidos>();
-        services.AddScoped<IPontuaFamilia, PontuaFamilia>();
-        services.AddAutoMapper(typeof(AutoMapperProfile));
 
     }
 }

@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
-using Projeto.Aplicacao.DTOs;
+using Projeto.Aplicacao.DTOs.Requests;
+using Projeto.Aplicacao.DTOs.Responses;
 using Projeto.Dominio;
 
 namespace Projeto.WebApi.AutoMapper

@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Projeto.Aplicacao.DTOs;
+using Projeto.Aplicacao.DTOs.Requests;
 using Projeto.Dominio;
 
 namespace Projeto.Aplicacao.RegistroFamilia
