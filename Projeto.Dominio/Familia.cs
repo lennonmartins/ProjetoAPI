@@ -49,9 +49,9 @@
             }
         }
 
-        public void AdicionarPontos(int pontos)
+        public virtual void AdicionarPontos(int pontos)
         {
-            this.Pontos = pontos;   
+            Pontos += pontos;   
         }
     }
 }

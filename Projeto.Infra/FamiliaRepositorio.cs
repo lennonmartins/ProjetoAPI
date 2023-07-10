@@ -13,12 +13,19 @@ namespace Projeto.Infra
             _session = session;
         }
 
-        public Familia BuscarTodos()
+        public Familia? BuscarFamiliaPeloCpfDoResponsavel(string cpf)
         {
-             return _session.Query<Familia>().FirstOrDefault();
+            try
+            {
+                return _session.Query<Familia>().FirstOrDefault(familia => familia.Cpf_responsavel == cpf);
+            }
+            catch(Exception ex)
+            {
+                throw;
+            }
         }
 
-        public void Salvar(Familia familia)
+        public void SalvarNovaFamilia(Familia familia)
         {
             using (var transacao = _session.BeginTransaction())
             try

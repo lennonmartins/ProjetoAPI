@@ -1,4 +1,6 @@
-﻿using Projeto.Dominio;
+﻿using AutoMapper;
+using Projeto.Aplicacao.DTOs;
+using Projeto.Dominio;
 
 namespace Projeto.Aplicacao.Servicos
 {
@@ -6,28 +8,31 @@ namespace Projeto.Aplicacao.Servicos
     {
         private readonly IFamiliaRepositorio _familiaRepositorio;
         private readonly Criterios validacoes;
+        private readonly IMapper _mapper;
         private readonly List<IValidaCriteriosAtendidos> criterios = new()
         {
             new CriterioQuantidadeDeDependentes(),
             new CriterioRenda(),
         };
-        public PontuaFamilia(IFamiliaRepositorio familiaRepositorio, Criterios criterios)
+        public PontuaFamilia(IFamiliaRepositorio familiaRepositorio, Criterios criterios, IMapper mapper)
         {
             _familiaRepositorio = familiaRepositorio;
             validacoes = criterios;
+            _mapper = mapper;
         }
 
-        public Familia PontuarFamiliaPelosCriteriosAtendidos()
+        public FamiliaPontuadaResponseDto PontuarFamiliaPelosCriteriosAtendidos(string cpfDoReponsavel)
         {
-            Familia familiaRetornada = BuscarFamilia();
+            Familia familiaRetornada = BuscarFamiliaPeloCpfDoResponsavel(cpfDoReponsavel);
             validacoes.SetarCriterios(criterios);
             validacoes.Resultado(familiaRetornada);
-            return familiaRetornada;
+            var familia= _mapper.Map<FamiliaPontuadaResponseDto>(familiaRetornada);
+            return familia;
         }
 
-        private Familia BuscarFamilia()
+        private Familia BuscarFamiliaPeloCpfDoResponsavel(string cpfDoReponsavel)
         {
-            return _familiaRepositorio.BuscarTodos();
+            return _familiaRepositorio.BuscarFamiliaPeloCpfDoResponsavel(cpfDoReponsavel);
         }
     }
 }

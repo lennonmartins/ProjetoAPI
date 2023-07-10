@@ -1,9 +1,10 @@
-﻿using Projeto.Dominio;
+﻿using Projeto.Aplicacao.DTOs;
+using Projeto.Dominio;
 
 namespace Projeto.Aplicacao.Servicos
 {
     public interface IPontuaFamilia
     {
-        public Familia PontuarFamiliaPelosCriteriosAtendidos();
+        public FamiliaPontuadaResponseDto PontuarFamiliaPelosCriteriosAtendidos(string cpf);
     }
 }

@@ -2,8 +2,8 @@
 {
     public interface IFamiliaRepositorio
     {
-        void Salvar(Familia familia);
-        Familia BuscarTodos();
+        void SalvarNovaFamilia(Familia familia);
+        Familia? BuscarFamiliaPeloCpfDoResponsavel(string cpf);
        
     }
 }

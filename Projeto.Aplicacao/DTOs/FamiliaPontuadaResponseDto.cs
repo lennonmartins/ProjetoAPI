@@ -2,9 +2,9 @@
 
 namespace Projeto.Aplicacao.DTOs
 {
-    public class FamiliaPontuadaRequestDto
+    public class FamiliaPontuadaResponseDto
     {
         public string NomeDoResponsavel { get; set; }
-        public int Pontuacao { get; set; }  
+        public int Pontos { get; set; }  
     }   
 }

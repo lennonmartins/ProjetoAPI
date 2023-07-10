@@ -26,10 +26,10 @@ namespace Projeto.WebApi.Controllers
         }
 
         [HttpGet]
-        public IActionResult BuscarFamiliaComPontuacao()
+        public IActionResult BuscarFamiliaComPontuacao(string cpfDoResponsavel)
         {
-            var familiaPontuadaRetornada = _pontuaFamilia.PontuarFamiliaPelosCriteriosAtendidos();
-            return Ok(new { NomeDoResponsavel = familiaPontuadaRetornada.NomeDoResponsavel, Pontos = familiaPontuadaRetornada.Pontos });
+            var familiaPontuadaRetornada = _pontuaFamilia.PontuarFamiliaPelosCriteriosAtendidos(cpfDoResponsavel);
+            return Ok(familiaPontuadaRetornada);
         }
     }
 }

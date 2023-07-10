@@ -16,7 +16,7 @@ namespace Projeto.Aplicacao.RegistroFamilia
         public Familia Cadastrarfamilia(FamiliaRequestDto familiaRequestDto)
         {
             var familia = _mapper.Map<Familia>(familiaRequestDto);
-            _familiaRepositorio.Salvar(familia);
+            _familiaRepositorio.SalvarNovaFamilia(familia);
             return familia;
         }
     }

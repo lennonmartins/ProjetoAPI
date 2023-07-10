@@ -8,6 +8,7 @@ namespace Projeto.WebApi.AutoMapper
     {
         public AutoMapperProfile() {
             CreateMap<FamiliaRequestDto, Familia>();
+            CreateMap<Familia, FamiliaPontuadaResponseDto>();
         }
     }
 }
