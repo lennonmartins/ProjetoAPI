@@ -278,6 +278,14 @@
               "target": "Package",
               "version": "[3.3.2, )"
             },
+            "Microsoft.AspNetCore.Mvc.Versioning": {
+              "target": "Package",
+              "version": "[5.1.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer": {
+              "target": "Package",
+              "version": "[5.1.0, )"
+            },
             "NHibernate": {
               "target": "Package",
               "version": "[5.4.2, )"

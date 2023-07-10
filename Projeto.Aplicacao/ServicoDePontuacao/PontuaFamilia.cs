@@ -2,32 +2,27 @@
 using Projeto.Aplicacao.DTOs;
 using Projeto.Dominio;
 
-namespace Projeto.Aplicacao.Servicos
+namespace Projeto.Aplicacao.ServicoDePontuacao
 {
     public class PontuaFamilia : IPontuaFamilia
     {
         private readonly IFamiliaRepositorio _familiaRepositorio;
-        private readonly Criterios validacoes;
+        private readonly ValidacaoDeCriteriosAtendidos _validacaoDeCriterios;
         private readonly IMapper _mapper;
-        private readonly List<IValidaCriteriosAtendidos> criterios = new()
-        {
-            new CriterioQuantidadeDeDependentes(),
-            new CriterioRenda(),
-        };
-        public PontuaFamilia(IFamiliaRepositorio familiaRepositorio, Criterios criterios, IMapper mapper)
+    
+        public PontuaFamilia(IFamiliaRepositorio familiaRepositorio, ValidacaoDeCriteriosAtendidos validacao, IMapper mapper)
         {
             _familiaRepositorio = familiaRepositorio;
-            validacoes = criterios;
+            _validacaoDeCriterios = validacao;
             _mapper = mapper;
         }
 
         public FamiliaPontuadaResponseDto PontuarFamiliaPelosCriteriosAtendidos(string cpfDoReponsavel)
         {
             Familia familiaRetornada = BuscarFamiliaPeloCpfDoResponsavel(cpfDoReponsavel);
-            validacoes.SetarCriterios(criterios);
-            validacoes.Resultado(familiaRetornada);
-            var familia= _mapper.Map<FamiliaPontuadaResponseDto>(familiaRetornada);
-            return familia;
+            _validacaoDeCriterios.ObterQuantidadeDePontosPorCriteriosAtendidos(familiaRetornada);
+            var familiaPontuada = _mapper.Map<FamiliaPontuadaResponseDto>(familiaRetornada);
+            return familiaPontuada;
         }
 
         private Familia BuscarFamiliaPeloCpfDoResponsavel(string cpfDoReponsavel)

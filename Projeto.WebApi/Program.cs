@@ -1,8 +1,9 @@
 using Autofac;
 using FluentMigrator.Runner;
 using FluentNHibernate.Cfg;
+using Microsoft.AspNetCore.Mvc.Routing;
 using Projeto.Aplicacao.RegistroFamilia;
-using Projeto.Aplicacao.Servicos;
+using Projeto.Aplicacao.ServicoDePontuacao;
 using Projeto.Dominio;
 using Projeto.Infra;
 using Projeto.WebApi.AutoMapper;
@@ -16,6 +17,7 @@ public class Program
         ConfigureNHibernate(builder.Services);
 
         // Add services to the container.
+       
         builder.Services.AddControllers();
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
@@ -76,7 +78,8 @@ public class Program
         services.AddSingleton(sessionFactory);
         services.AddScoped<IFamiliaRepositorio, FamiliaRepositorio>();
         services.AddScoped<ICadastraFamilia, CadastraFamiliaService>();
-        services.AddScoped<Criterios>();
+        services.AddScoped<GerenciadorDeCriterios>();
+        services.AddScoped<ValidacaoDeCriteriosAtendidos>();
         services.AddScoped<IPontuaFamilia, PontuaFamilia>();
         services.AddAutoMapper(typeof(AutoMapperProfile));
 

@@ -1,7 +1,7 @@
 ﻿using Projeto.Aplicacao.DTOs;
 using Projeto.Dominio;
 
-namespace Projeto.Aplicacao.Servicos
+namespace Projeto.Aplicacao.ServicoDePontuacao
 {
     public interface IPontuaFamilia
     {

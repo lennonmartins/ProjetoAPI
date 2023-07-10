@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "hBx2zrGvwuV6qIqla+zLZEEUmcMTQ4eN0zVPqMJuCDdslz7aAgk8oEXoWEhnNlDeoVB65L6grvNnEqzQ7f0w6w==",
+  "dgSpecHash": "FtE2956Th5fffTGQeDSOF35lT0aUydk7DSEFvaVbZSZf7eO/HFBMrU69icD8vwhdHhcP+OVSMkxgqjfbMfMMHg==",
   "success": true,
   "projectFilePath": "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.WebApi\\Projeto.WebApi.csproj",
   "expectedPackageFiles": [
@@ -29,6 +29,8 @@
     "C:\\Users\\LennonMartins\\.nuget\\packages\\fluentmigrator.runner.sqlserverce\\3.3.2\\fluentmigrator.runner.sqlserverce.3.3.2.nupkg.sha512",
     "C:\\Users\\LennonMartins\\.nuget\\packages\\fluentnhibernate\\3.2.1\\fluentnhibernate.3.2.1.nupkg.sha512",
     "C:\\Users\\LennonMartins\\.nuget\\packages\\iesi.collections\\4.0.4\\iesi.collections.4.0.4.nupkg.sha512",
+    "C:\\Users\\LennonMartins\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning\\5.1.0\\microsoft.aspnetcore.mvc.versioning.5.1.0.nupkg.sha512",
+    "C:\\Users\\LennonMartins\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning.apiexplorer\\5.1.0\\microsoft.aspnetcore.mvc.versioning.apiexplorer.5.1.0.nupkg.sha512",
     "C:\\Users\\LennonMartins\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\LennonMartins\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.2\\microsoft.data.sqlclient.2.1.2.nupkg.sha512",
     "C:\\Users\\LennonMartins\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",

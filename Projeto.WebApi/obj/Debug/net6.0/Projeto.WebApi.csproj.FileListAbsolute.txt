@@ -67,6 +67,7 @@ C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.WebApi\bin\Debug\net6.
 C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.WebApi\bin\Debug\net6.0\System.Data.SqlServerCe.dll
 C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.WebApi\bin\Debug\net6.0\FluentNHibernate.dll
 C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.WebApi\bin\Debug\net6.0\Iesi.Collections.dll
+C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.WebApi\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Versioning.dll
 C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.WebApi\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
 C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.WebApi\bin\Debug\net6.0\Microsoft.Identity.Client.dll
 C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.WebApi\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
@@ -136,3 +137,4 @@ C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.WebApi\obj\Debug\net6.
 C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.WebApi\obj\Debug\net6.0\Projeto.WebApi.pdb
 C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.WebApi\obj\Debug\net6.0\Projeto.WebApi.genruntimeconfig.cache
 C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.WebApi\obj\Debug\net6.0\ref\Projeto.WebApi.dll
+C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.WebApi\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer.dll

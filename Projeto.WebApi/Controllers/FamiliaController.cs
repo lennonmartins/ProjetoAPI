@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Projeto.Aplicacao.DTOs;
 using Projeto.Aplicacao.RegistroFamilia;
-using Projeto.Aplicacao.Servicos;
+using Projeto.Aplicacao.ServicoDePontuacao;
 
 namespace Projeto.WebApi.Controllers
 {
@@ -18,18 +18,18 @@ namespace Projeto.WebApi.Controllers
             _pontuaFamilia = pontuaFamilia;
         }
 
-        [HttpPost]
+        [HttpPost, Route("")]
         public IActionResult CadastrarFamilia([FromBody] FamiliaRequestDto familiaRequestDto)
         {
             var familiaCadastrada = _cadastraFamilia.Cadastrarfamilia(familiaRequestDto);
             return Ok(familiaCadastrada);
         }
 
-        [HttpGet]
+      /*  [HttpGet]
         public IActionResult BuscarFamiliaComPontuacao(string cpfDoResponsavel)
         {
             var familiaPontuadaRetornada = _pontuaFamilia.PontuarFamiliaPelosCriteriosAtendidos(cpfDoResponsavel);
             return Ok(familiaPontuadaRetornada);
-        }
+        }*/
     }
 }
