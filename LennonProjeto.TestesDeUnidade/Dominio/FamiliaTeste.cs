@@ -50,5 +50,16 @@ namespace Projeto.TestesDeUnidade.Dominio
 
             Assert.Throws<ArgumentException>(familiaEsperada);
         }
+
+        [Test]
+        public void Deve_adicionar_pontos_a_familia()
+        {
+            int pontosEsperados = 5;
+            var familiaCriada = new FamiliaBuilder().Criar();
+
+            familiaCriada.AdicionarPontos(pontosEsperados);
+
+            Assert.AreEqual(pontosEsperados, familiaCriada.Pontos);
+        }
     }
 }

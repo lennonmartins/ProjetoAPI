@@ -1,4 +1,5 @@
 using FluentMigrator.Runner;
+using Projeto.Aplicacao.ListagemDeFamilias;
 using Projeto.Aplicacao.RegistroFamilia;
 using Projeto.Aplicacao.ServicoDePontuacao;
 using Projeto.Dominio;
@@ -27,6 +28,7 @@ public class Program
         builder.Services.AddScoped<GerenciadorDeCriterios>();
         builder.Services.AddScoped<ValidacaoDeCriteriosAtendidos>();
         builder.Services.AddScoped<IPontuaFamilia, PontuaFamilia>();
+        builder.Services.AddScoped<IListagemDeFamilias, ListagemDeFamilias>();
         builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 
         var app = builder.Build();

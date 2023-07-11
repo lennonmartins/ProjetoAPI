@@ -13,7 +13,7 @@ namespace Projeto.Infra
             _session = session;
         }
 
-        public Familia? BuscarFamiliaPeloCpfDoResponsavel(string cpf)
+        public Familia? ObterPeloCpfDoResponsavel(string cpf)
         {
             try
             {
@@ -25,7 +25,19 @@ namespace Projeto.Infra
             }
         }
 
-        public void SalvarNovaFamilia(Familia familia)
+        public List<Familia> ObterTodas()
+        {
+            try
+            {
+               return _session.Query<Familia>().ToList();
+            }
+            catch(Exception ex)
+            {
+                throw;
+            }
+        }
+
+        public void SalvarNova(Familia familia)
         {
             using (var transacao = _session.BeginTransaction())
             try

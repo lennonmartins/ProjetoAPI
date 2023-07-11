@@ -1,5 +1,4 @@
 ﻿using Projeto.Dominio;
-using System.Security.Cryptography;
 
 namespace Projeto.TestesDeUnidade.Dominio.Builder
 {

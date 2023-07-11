@@ -17,7 +17,7 @@ namespace Projeto.Aplicacao.ServicoDePontuacao
             _mapper = mapper;
         }
 
-        public FamiliaPontuadaResponseDto PontuarFamiliaPelosCriteriosAtendidos(string cpfDoReponsavel)
+        public FamiliaPontuadaResponseDto PontuarPelosCriteriosAtendidos(string cpfDoReponsavel)
         {
             Familia familiaRetornada = BuscarFamiliaPeloCpfDoResponsavel(cpfDoReponsavel);
             _validacaoDeCriterios.ObterQuantidadeDePontosPorCriteriosAtendidos(familiaRetornada);
@@ -27,7 +27,7 @@ namespace Projeto.Aplicacao.ServicoDePontuacao
 
         private Familia BuscarFamiliaPeloCpfDoResponsavel(string cpfDoReponsavel)
         {
-            return _familiaRepositorio.BuscarFamiliaPeloCpfDoResponsavel(cpfDoReponsavel);
+            return _familiaRepositorio.ObterPeloCpfDoResponsavel(cpfDoReponsavel);
         }
     }
 }
