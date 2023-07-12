@@ -16,4 +16,19 @@
     <ProjectReference Include="..\Projeto.Infra\Projeto.Infra.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="RegistroFamilia\**" />
+    <Compile Remove="ListagemDeFamilias\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="RegistroFamilia\**" />
+    <EmbeddedResource Remove="ListagemDeFamilias\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="RegistroFamilia\**" />
+    <None Remove="ListagemDeFamilias\**" />
+  </ItemGroup>
+
 </Project>

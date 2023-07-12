@@ -1,10 +1,10 @@
-﻿namespace Projeto.Aplicacao.ServicoDePontuacao
+﻿namespace Projeto.Aplicacao.Pontuacoes
 {
-    public class GerenciadorDeCriterios
+    public class FabricaDeCriterios
     {
         private readonly List<IValidaCriteriosAtendidos> _criterios;
 
-        public GerenciadorDeCriterios()
+        public FabricaDeCriterios()
         {
             _criterios = new List<IValidaCriteriosAtendidos>
             {
@@ -13,7 +13,7 @@
             };
         }
 
-        public List<IValidaCriteriosAtendidos> ObterCriterioSetados()
+        public List<IValidaCriteriosAtendidos> Fabricar()
         {
             return _criterios.ToList();
         }

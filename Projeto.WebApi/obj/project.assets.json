@@ -8052,19 +8052,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\LennonMartins\\.nuget\\packages\\": {}
+    "C:\\Users\\BrunoFerreira\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.WebApi\\Projeto.WebApi.csproj",
+      "projectUniqueName": "C:\\Pessoal\\Projetos\\ProjetoAPI\\Projeto.WebApi\\Projeto.WebApi.csproj",
       "projectName": "Projeto.WebApi",
-      "projectPath": "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.WebApi\\Projeto.WebApi.csproj",
-      "packagesPath": "C:\\Users\\LennonMartins\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.WebApi\\obj\\",
+      "projectPath": "C:\\Pessoal\\Projetos\\ProjetoAPI\\Projeto.WebApi\\Projeto.WebApi.csproj",
+      "packagesPath": "C:\\Users\\BrunoFerreira\\.nuget\\packages\\",
+      "outputPath": "C:\\Pessoal\\Projetos\\ProjetoAPI\\Projeto.WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\LennonMartins\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\BrunoFerreira\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8072,21 +8072,20 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://pkgs.dev.azure.com/solucoesdigix/Projetos/_packaging/Digix/nuget/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Aplicacao\\Projeto.Aplicacao.csproj": {
-              "projectPath": "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Aplicacao\\Projeto.Aplicacao.csproj"
+            "C:\\Pessoal\\Projetos\\ProjetoAPI\\Projeto.Aplicacao\\Projeto.Aplicacao.csproj": {
+              "projectPath": "C:\\Pessoal\\Projetos\\ProjetoAPI\\Projeto.Aplicacao\\Projeto.Aplicacao.csproj"
             },
-            "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Dominio\\Projeto.Dominio.csproj": {
-              "projectPath": "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Dominio\\Projeto.Dominio.csproj"
+            "C:\\Pessoal\\Projetos\\ProjetoAPI\\Projeto.Dominio\\Projeto.Dominio.csproj": {
+              "projectPath": "C:\\Pessoal\\Projetos\\ProjetoAPI\\Projeto.Dominio\\Projeto.Dominio.csproj"
             },
-            "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Infra\\Projeto.Infra.csproj": {
-              "projectPath": "C:\\Users\\LennonMartins\\source\\repos\\ProjetoLennon\\Projeto.Infra\\Projeto.Infra.csproj"
+            "C:\\Pessoal\\Projetos\\ProjetoAPI\\Projeto.Infra\\Projeto.Infra.csproj": {
+              "projectPath": "C:\\Pessoal\\Projetos\\ProjetoAPI\\Projeto.Infra\\Projeto.Infra.csproj"
             }
           }
         }
@@ -8165,7 +8164,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.104\\RuntimeIdentifierGraph.json"
       }
     }
   }

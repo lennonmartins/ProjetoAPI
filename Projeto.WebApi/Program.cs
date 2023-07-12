@@ -1,11 +1,11 @@
 using FluentMigrator.Runner;
-using Projeto.Aplicacao.ListagemDeFamilias;
-using Projeto.Aplicacao.RegistroFamilia;
-using Projeto.Aplicacao.ServicoDePontuacao;
 using Projeto.Dominio;
 using Projeto.Infra;
 using Projeto.WebApi.AutoMapper;
 using System.Reflection;
+using Projeto.Aplicacao.Familias;
+using Projeto.Aplicacao.Pontuacoes;
+using Projeto.Dominio.Familias;
 
 public class Program
 {
@@ -24,16 +24,16 @@ public class Program
         NHibernateRegistry.ObterSessionFactory(builder.Services);
 
         builder.Services.AddScoped<IFamiliaRepositorio, FamiliaRepositorio>();
-        builder.Services.AddScoped<ICadastraFamilia, CadastraFamiliaService>();
-        builder.Services.AddScoped<GerenciadorDeCriterios>();
+        builder.Services.AddScoped<ICadastraFamilia, CadastraFamilia>();
+        builder.Services.AddScoped<FabricaDeCriterios>();
         builder.Services.AddScoped<ValidacaoDeCriteriosAtendidos>();
         builder.Services.AddScoped<IPontuaFamilia, PontuaFamilia>();
-        builder.Services.AddScoped<IListagemDeFamilias, ListagemDeFamilias>();
+        builder.Services.AddScoped<IListaFamilia, ListaFamilia>();
         builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 
         var app = builder.Build();
 
-        // Configuração the HTTP request pipeline.
+        // ConfiguraÃ§Ã£o the HTTP request pipeline.
         if (app.Environment.IsDevelopment())
         {
             app.UseSwagger();

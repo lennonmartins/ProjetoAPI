@@ -1,7 +1,6 @@
 ﻿using Projeto.Aplicacao.DTOs.Responses;
-using Projeto.Dominio;
 
-namespace Projeto.Aplicacao.ServicoDePontuacao
+namespace Projeto.Aplicacao.Pontuacoes
 {
     public interface IPontuaFamilia
     {

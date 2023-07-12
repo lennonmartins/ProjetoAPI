@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Projeto.Aplicacao.DTOs.Requests;
-using Projeto.Aplicacao.RegistroFamilia;
-using Projeto.Aplicacao.ServicoDePontuacao;
+using Projeto.Aplicacao.Familias;
+using Projeto.Aplicacao.Pontuacoes;
 
 namespace Projeto.WebApi.Controllers
 {
@@ -21,7 +21,7 @@ namespace Projeto.WebApi.Controllers
         [HttpPost, Route("")]
         public IActionResult CadastrarFamilia([FromBody] FamiliaRequestDto familiaRequestDto)
         {
-            var familiaCadastrada = _cadastraFamilia.Cadastrarfamilia(familiaRequestDto);
+            var familiaCadastrada = _cadastraFamilia.Cadastrar(familiaRequestDto);
             return Ok(familiaCadastrada);
         }
     }

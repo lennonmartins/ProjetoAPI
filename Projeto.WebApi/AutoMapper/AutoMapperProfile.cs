@@ -2,6 +2,7 @@
 using Projeto.Aplicacao.DTOs.Requests;
 using Projeto.Aplicacao.DTOs.Responses;
 using Projeto.Dominio;
+using Projeto.Dominio.Familias;
 
 namespace Projeto.WebApi.AutoMapper
 {

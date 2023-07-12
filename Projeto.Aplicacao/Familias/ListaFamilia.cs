@@ -1,16 +1,16 @@
 ﻿using Projeto.Aplicacao.DTOs.Responses;
-using Projeto.Aplicacao.ServicoDePontuacao;
-using Projeto.Dominio;
+using Projeto.Aplicacao.Pontuacoes;
+using Projeto.Dominio.Familias;
 
-namespace Projeto.Aplicacao.ListagemDeFamilias
+namespace Projeto.Aplicacao.Familias
 {
-    public class ListagemDeFamilias : IListagemDeFamilias
+    public class ListaFamilia : IListaFamilia
     {
         private readonly IFamiliaRepositorio _familiaRepositorio;
         
         private readonly IPontuaFamilia _pontuaFamilia;
 
-        public ListagemDeFamilias(IFamiliaRepositorio familiaRepositorio, IPontuaFamilia pontuaFamilia)
+        public ListaFamilia(IFamiliaRepositorio familiaRepositorio, IPontuaFamilia pontuaFamilia)
         {
             _familiaRepositorio = familiaRepositorio;
             _pontuaFamilia = pontuaFamilia;
