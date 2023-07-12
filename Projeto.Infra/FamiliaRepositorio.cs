@@ -1,6 +1,7 @@
 ﻿using NHibernate;
 using NHibernate.Util;
 using Projeto.Dominio;
+using Projeto.Dominio.Familias;
 
 namespace Projeto.Infra
 {

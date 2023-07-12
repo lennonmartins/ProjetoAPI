@@ -5,7 +5,7 @@ class Program
 {
     public static void Main(string[] args)
     {
-       /* CadastraFamiliaService cadastraFamiliaService = new CadastraFamiliaService();*/
+       /* CadastraFamilia cadastraFamiliaService = new CadastraFamilia();*/
 
      /*   Console.WriteLine("Informe o nome do responsável: ");
         string nomeDoResponsavel = Console.ReadLine();
@@ -24,7 +24,7 @@ class Program
 */
         Console.WriteLine(System.AppDomain.CurrentDomain.BaseDirectory.ToString());
 
-        /*Familia familiaCadastrada = cadastraFamiliaService.Cadastrarfamilia(nomeDoResponsavel, telefone, cpf, rendaTotalDaFamilia, quantidadeDeDepedentes);
+        /*Familia familiaCadastrada = cadastraFamiliaService.Cadastrar(nomeDoResponsavel, telefone, cpf, rendaTotalDaFamilia, quantidadeDeDepedentes);
 
         Console.WriteLine(familiaCadastrada.NomeDoResponsavel);*/
     }

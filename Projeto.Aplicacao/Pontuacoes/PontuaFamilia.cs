@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using Projeto.Aplicacao.DTOs.Responses;
-using Projeto.Dominio;
+using Projeto.Dominio.Familias;
 
-namespace Projeto.Aplicacao.ServicoDePontuacao
+namespace Projeto.Aplicacao.Pontuacoes
 {
     public class PontuaFamilia : IPontuaFamilia
     {
@@ -19,15 +19,9 @@ namespace Projeto.Aplicacao.ServicoDePontuacao
 
         public FamiliaPontuadaResponseDto PontuarPelosCriteriosAtendidos(string cpfDoReponsavel)
         {
-            Familia familiaRetornada = BuscarFamiliaPeloCpfDoResponsavel(cpfDoReponsavel);
-            _validacaoDeCriterios.ObterQuantidadeDePontosPorCriteriosAtendidos(familiaRetornada);
-            var familiaPontuada = _mapper.Map<FamiliaPontuadaResponseDto>(familiaRetornada);
-            return familiaPontuada;
-        }
-
-        private Familia BuscarFamiliaPeloCpfDoResponsavel(string cpfDoReponsavel)
-        {
-            return _familiaRepositorio.ObterPeloCpfDoResponsavel(cpfDoReponsavel);
+            var familia = _familiaRepositorio.ObterPeloCpfDoResponsavel(cpfDoReponsavel);
+            return _mapper.Map<FamiliaPontuadaResponseDto>(
+                _validacaoDeCriterios.ObterQuantidadeDePontosPorCriteriosAtendidos(familia));
         }
     }
 }

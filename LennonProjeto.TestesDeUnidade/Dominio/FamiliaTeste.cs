@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using Projeto.Dominio;
+using Projeto.Dominio.Familias;
 using Projeto.TestesDeUnidade.Dominio.Builder;
 
 namespace Projeto.TestesDeUnidade.Dominio

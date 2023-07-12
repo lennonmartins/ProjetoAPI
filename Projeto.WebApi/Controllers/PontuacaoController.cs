@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Projeto.Aplicacao.ListagemDeFamilias;
-using Projeto.Aplicacao.ServicoDePontuacao;
+using Projeto.Aplicacao.Familias;
+using Projeto.Aplicacao.Pontuacoes;
 
 namespace Projeto.WebApi.Controllers
 {
@@ -9,11 +9,11 @@ namespace Projeto.WebApi.Controllers
     public class PontuacaoController : ControllerBase
     {
         private readonly IPontuaFamilia _pontuaFamilia;
-        private readonly IListagemDeFamilias _listagemDeFamilias;
-        public PontuacaoController(IPontuaFamilia pontuaFamilia, IListagemDeFamilias listagemDeFamilia) 
+        private readonly IListaFamilia _listaFamilia;
+        public PontuacaoController(IPontuaFamilia pontuaFamilia, IListaFamilia listaFamilia) 
         {
             _pontuaFamilia = pontuaFamilia;
-            _listagemDeFamilias = listagemDeFamilia;
+            _listaFamilia = listaFamilia;
         }
 
         [HttpGet]
@@ -26,7 +26,7 @@ namespace Projeto.WebApi.Controllers
         [HttpGet, Route("listagem")]
         public IActionResult BuscarListaDeFamiliasPelaPontuacao()
         {
-            var familiasRetornadas = _listagemDeFamilias.ObterListaOrdenadaPorPontos();
+            var familiasRetornadas = _listaFamilia.ObterListaOrdenadaPorPontos();
             return Ok(familiasRetornadas);
         }
     }

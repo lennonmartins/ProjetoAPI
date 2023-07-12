@@ -1,6 +1,6 @@
-﻿using Projeto.Dominio;
+﻿using Projeto.Dominio.Familias;
 
-namespace Projeto.Aplicacao.ServicoDePontuacao
+namespace Projeto.Aplicacao.Pontuacoes
 {
     public class CriterioRenda : IValidaCriteriosAtendidos
     {

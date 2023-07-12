@@ -1,4 +1,4 @@
-﻿namespace Projeto.Dominio
+﻿namespace Projeto.Dominio.Familias
 {
     public class Familia
     {
