@@ -2639,6 +2639,9 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "FluentMigrator": "3.3.2",
+          "FluentMigrator.Runner": "3.3.2",
+          "FluentMigrator.Runner.Core": "3.3.2",
+          "FluentMigrator.Runner.SqlServer": "3.3.2",
           "FluentNHibernate": "3.2.1",
           "NHibernate": "5.4.2",
           "Projeto.Dominio": "1.0.0",

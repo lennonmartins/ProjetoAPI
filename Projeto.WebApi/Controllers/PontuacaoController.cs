@@ -16,7 +16,7 @@ namespace Projeto.WebApi.Controllers
             _listagemDeFamilias = listagemDeFamilia;
         }
 
-        [HttpGet]
+        [HttpGet ("porCpf/{cpfDoResponsavel}")]
         public IActionResult BuscarFamiliaComPontuacao(string cpfDoResponsavel)
         {
             var familiaPontuadaRetornada = _pontuaFamilia.PontuarPelosCriteriosAtendidos(cpfDoResponsavel);

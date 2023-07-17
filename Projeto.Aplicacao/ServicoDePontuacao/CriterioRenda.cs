@@ -4,16 +4,14 @@ namespace Projeto.Aplicacao.ServicoDePontuacao
 {
     public class CriterioRenda : IValidaCriteriosAtendidos
     {
-        private readonly int RendaMaxima = 1500;
-        private readonly int RendaMinima = 900;
         public void ValidarCriteriosAtendidos(Familia familia)
         {
             int pontos = 0;
-            if (familia.RendaTotalDaFamilia > RendaMinima && familia.RendaTotalDaFamilia <= RendaMaxima)
+            if (familia.PossuiRendaEntreMininaEMaxima())
             {
                 pontos = 3;   
             }
-            if (familia.RendaTotalDaFamilia <= RendaMinima)
+            if (familia.PossuiRendaMenorQueAMinina())
             {
                 pontos = 5;
             }

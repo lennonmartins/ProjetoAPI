@@ -1,5 +1,4 @@
 ﻿using NHibernate;
-using NHibernate.Util;
 using Projeto.Dominio;
 
 namespace Projeto.Infra
@@ -13,11 +12,20 @@ namespace Projeto.Infra
             _session = session;
         }
 
-        public Familia? ObterPeloCpfDoResponsavel(string cpf)
+        public Familia ObterPeloCpfDoResponsavel(string cpf)
         {
             try
             {
-                return _session.Query<Familia>().FirstOrDefault(familia => familia.Cpf_responsavel == cpf);
+                var familia = _session.Query<Familia>().Single(familia => familia.Cpf_responsavel == cpf);
+                if (familia == null)
+                {
+                    throw new Exception("familia não encontrada");
+                }
+                return familia;
+            }
+            catch(InvalidOperationException e)
+            {
+                throw;
             }
             catch(Exception ex)
             {

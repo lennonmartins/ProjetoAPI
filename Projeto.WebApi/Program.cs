@@ -1,35 +1,23 @@
-using FluentMigrator.Runner;
-using Projeto.Aplicacao.ListagemDeFamilias;
-using Projeto.Aplicacao.RegistroFamilia;
-using Projeto.Aplicacao.ServicoDePontuacao;
-using Projeto.Dominio;
 using Projeto.Infra;
-using Projeto.WebApi.AutoMapper;
-using System.Reflection;
+using Projeto.Infra.Migrations;
+using Projeto.WebApi;
 
 public class Program
 {
     public static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
-        ConfigurarMigracao(builder.Services);
+        ConfiguraMigracao.ConfigurarMigracao();
 
         // Add services to the container.
-
         builder.Services.AddControllers();
+
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
 
         NHibernateRegistry.ObterSessionFactory(builder.Services);
-
-        builder.Services.AddScoped<IFamiliaRepositorio, FamiliaRepositorio>();
-        builder.Services.AddScoped<ICadastraFamilia, CadastraFamiliaService>();
-        builder.Services.AddScoped<GerenciadorDeCriterios>();
-        builder.Services.AddScoped<ValidacaoDeCriteriosAtendidos>();
-        builder.Services.AddScoped<IPontuaFamilia, PontuaFamilia>();
-        builder.Services.AddScoped<IListagemDeFamilias, ListagemDeFamilias>();
-        builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
+        DependencyInjectionConfig.Configuracao(builder.Services);
 
         var app = builder.Build();
 
@@ -47,24 +35,6 @@ public class Program
         app.MapControllers();
 
         app.Run();
-    }
-
-    private static void ConfigurarMigracao(IServiceCollection services)
-    {
-        var connStr = @"Server=localhost;Database=ProjetoLennon;User Id=sa;Password=PapelZero.123;";
-
-        var serviceProvider = new ServiceCollection()
-            .AddFluentMigratorCore()
-            .ConfigureRunner(rb => rb
-                .AddSqlServer2012()
-                .WithGlobalConnectionString(connStr)
-                .ScanIn(Assembly.LoadFrom(@"bin\Debug\net6.0\Projeto.Infra.dll")).For.Migrations())
-            .AddLogging(lb => lb.AddFluentMigratorConsole())
-            .BuildServiceProvider();
-
-        var runner = serviceProvider.GetRequiredService<IMigrationRunner>();
-        runner.MigrateUp();
-
     }
 }
 
