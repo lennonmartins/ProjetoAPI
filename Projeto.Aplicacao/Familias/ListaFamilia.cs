@@ -2,15 +2,15 @@
 using Projeto.Aplicacao.ServicoDePontuacao;
 using Projeto.Dominio;
 
-namespace Projeto.Aplicacao.ListagemDeFamilias
+namespace Projeto.Aplicacao.Familias
 {
-    public class ListagemDeFamilias : IListagemDeFamilias
+    public class ListaFamilia : IListaFamilia
     {
         private readonly IFamiliaRepositorio _familiaRepositorio;
-        
+
         private readonly IPontuaFamilia _pontuaFamilia;
 
-        public ListagemDeFamilias(IFamiliaRepositorio familiaRepositorio, IPontuaFamilia pontuaFamilia)
+        public ListaFamilia(IFamiliaRepositorio familiaRepositorio, IPontuaFamilia pontuaFamilia)
         {
             _familiaRepositorio = familiaRepositorio;
             _pontuaFamilia = pontuaFamilia;
@@ -19,17 +19,17 @@ namespace Projeto.Aplicacao.ListagemDeFamilias
         public List<FamiliaPontuadaResponseDto> ObterListaOrdenadaPorPontos()
         {
             var familiasRetornadas = _familiaRepositorio.ObterTodas();
-            var familiasOrdenadasPorPontos  = OrdernarPelaPontuacao(familiasRetornadas);
+            var familiasOrdenadasPorPontos = OrdernarPelaPontuacao(familiasRetornadas);
             return familiasOrdenadasPorPontos;
         }
 
         private List<FamiliaPontuadaResponseDto> OrdernarPelaPontuacao(List<Familia> familias)
-        { 
+        {
             var familiasPontuadas = new List<FamiliaPontuadaResponseDto>();
 
             foreach (var familia in familias)
             {
-                familiasPontuadas.Add(_pontuaFamilia.PontuarPelosCriteriosAtendidos(familia.Cpf_responsavel));
+                familiasPontuadas.Add(_pontuaFamilia.PontuarPelosCriteriosAtendidos(familia));
             }
 
             var familiaPontuadasEOrdenadas = familiasPontuadas.OrderByDescending(f => f.Pontos).ToList();

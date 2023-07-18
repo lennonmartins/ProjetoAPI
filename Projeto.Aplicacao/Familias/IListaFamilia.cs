@@ -1,8 +1,8 @@
 ﻿using Projeto.Aplicacao.DTOs.Responses;
 
-namespace Projeto.Aplicacao.ListagemDeFamilias
+namespace Projeto.Aplicacao.Familias
 {
-    public interface IListagemDeFamilias
+    public interface IListaFamilia
     {
         List<FamiliaPontuadaResponseDto> ObterListaOrdenadaPorPontos();
     }

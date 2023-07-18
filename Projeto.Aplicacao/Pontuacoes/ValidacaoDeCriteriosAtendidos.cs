@@ -11,7 +11,7 @@ namespace Projeto.Aplicacao.ServicoDePontuacao
             _criterios = criterios;
         }
 
-        public void ObterQuantidadeDePontosPorCriteriosAtendidos(Familia familia)
+        public void ObterQuantidadeDePontos(Familia familia)
         {
             var criterios = _criterios.ObterCriterioSetados();
             foreach ( var criterio in criterios)

@@ -1,10 +1,10 @@
 ﻿using Projeto.Aplicacao.DTOs.Requests;
 using Projeto.Dominio;
 
-namespace Projeto.Aplicacao.RegistroFamilia
+namespace Projeto.Aplicacao.Familias
 {
     public interface ICadastraFamilia
     {
-        Familia Cadastrarfamilia(FamiliaRequestDto familiaRequestDto);
+        Familia Cadastrar(FamiliaRequestDto familiaRequestDto);
     }
 }

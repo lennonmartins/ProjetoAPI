@@ -5,6 +5,6 @@ namespace Projeto.Aplicacao.ServicoDePontuacao
 {
     public interface IPontuaFamilia
     {
-        public FamiliaPontuadaResponseDto PontuarPelosCriteriosAtendidos(string cpf);
+        public FamiliaPontuadaResponseDto PontuarPelosCriteriosAtendidos(Familia familia);
     }
 }

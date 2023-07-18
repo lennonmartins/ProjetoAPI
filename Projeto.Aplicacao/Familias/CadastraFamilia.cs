@@ -2,18 +2,18 @@
 using Projeto.Aplicacao.DTOs.Requests;
 using Projeto.Dominio;
 
-namespace Projeto.Aplicacao.RegistroFamilia
+namespace Projeto.Aplicacao.Familias
 {
-    public class CadastraFamiliaService : ICadastraFamilia
-    {  
+    public class CadastraFamilia : ICadastraFamilia
+    {
         private readonly IFamiliaRepositorio _familiaRepositorio;
         private readonly IMapper _mapper;
-        public CadastraFamiliaService(IFamiliaRepositorio familiaRepositorio, IMapper mapper)
+        public CadastraFamilia(IFamiliaRepositorio familiaRepositorio, IMapper mapper)
         {
             _familiaRepositorio = familiaRepositorio;
             _mapper = mapper;
         }
-        public Familia Cadastrarfamilia(FamiliaRequestDto familiaRequestDto)
+        public Familia Cadastrar(FamiliaRequestDto familiaRequestDto)
         {
             var familia = _mapper.Map<Familia>(familiaRequestDto);
             _familiaRepositorio.SalvarNova(familia);

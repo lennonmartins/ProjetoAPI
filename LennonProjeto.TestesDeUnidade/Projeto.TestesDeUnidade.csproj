@@ -16,4 +16,8 @@
     <ProjectReference Include="..\Projeto.Dominio\Projeto.Dominio.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Aplicacao\" />
+  </ItemGroup>
+
 </Project>

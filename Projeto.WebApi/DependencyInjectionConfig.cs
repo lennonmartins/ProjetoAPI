@@ -1,5 +1,4 @@
-﻿using Projeto.Aplicacao.ListagemDeFamilias;
-using Projeto.Aplicacao.RegistroFamilia;
+﻿using Projeto.Aplicacao.Familias;
 using Projeto.Aplicacao.ServicoDePontuacao;
 using Projeto.Dominio;
 using Projeto.Infra;
@@ -11,11 +10,12 @@ namespace Projeto.WebApi
     {
         public static void Configuracao(IServiceCollection services){
             services.AddScoped<IFamiliaRepositorio, FamiliaRepositorio>();
-            services.AddScoped<ICadastraFamilia, CadastraFamiliaService>();
+            services.AddScoped<ICadastraFamilia, CadastraFamilia>();
             services.AddScoped<GerenciadorDeCriterios>();
             services.AddScoped<ValidacaoDeCriteriosAtendidos>();
+            services.AddScoped<IObterFamilia, ObterFamilia>();
             services.AddScoped<IPontuaFamilia, PontuaFamilia>();
-            services.AddScoped<IListagemDeFamilias, ListagemDeFamilias>();
+            services.AddScoped<IListaFamilia, ListaFamilia>();
             services.AddAutoMapper(typeof(AutoMapperProfile));
         }
 
