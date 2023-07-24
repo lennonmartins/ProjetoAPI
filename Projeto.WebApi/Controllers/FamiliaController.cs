@@ -10,12 +10,12 @@ namespace Projeto.WebApi.Controllers
     public class FamiliaController : ControllerBase
     {
         private readonly ICadastraFamilia _cadastraFamilia;
-        private readonly IPontuaFamilia _pontuaFamilia;
+        private readonly IObtemFamilia _obterFamilia;
 
-        public FamiliaController(ICadastraFamilia cadastraFamilia, IPontuaFamilia pontuaFamilia )
+        public FamiliaController(ICadastraFamilia cadastraFamilia, IObtemFamilia obterFamilia)
         {
             _cadastraFamilia = cadastraFamilia;
-            _pontuaFamilia = pontuaFamilia;
+            _obterFamilia = obterFamilia;   
         }
 
         [HttpPost, Route("")]
@@ -23,6 +23,13 @@ namespace Projeto.WebApi.Controllers
         {
             var familiaCadastrada = _cadastraFamilia.Cadastrar(familiaRequestDto);
             return Ok(familiaCadastrada);
+        }
+
+        [HttpGet("porCpf/{cpfDoResponsavel}")]
+        public IActionResult BuscarPeloCpfDoResponsavel(string cpfDoResponsavel)
+        {
+            var familiaPontuadaRetornada = _obterFamilia.ObterPeloCpfDoResponsavel(cpfDoResponsavel);
+            return Ok(familiaPontuadaRetornada);
         }
     }
 }

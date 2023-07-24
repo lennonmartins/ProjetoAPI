@@ -1,10 +1,9 @@
-﻿using Projeto.Aplicacao.DTOs.Responses;
-using Projeto.Dominio;
+﻿using Projeto.Dominio;
 
 namespace Projeto.Aplicacao.ServicoDePontuacao
 {
     public interface IPontuaFamilia
     {
-        public FamiliaPontuadaResponseDto PontuarPelosCriteriosAtendidos(Familia familia);
+        public Familia PontuarPelosCriteriosAtendidos(Familia familia, Pontuacao pontuacao);
     }
 }

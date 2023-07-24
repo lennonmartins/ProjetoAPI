@@ -4,6 +4,6 @@ namespace Projeto.Aplicacao.ServicoDePontuacao
 {
     public interface IValidaCriteriosAtendidos
     {
-        void ValidarCriteriosAtendidos(Familia familia);
+        void ValidarCriteriosAtendidos(Familia familia, Pontuacao pontuacao);
     }
 }

@@ -17,13 +17,9 @@ namespace Projeto.Infra
             try
             {
                 var familia = _session.Query<Familia>().Single(familia => familia.Cpf_responsavel == cpf);
-                if (familia == null)
-                {
-                    throw new Exception("familia não encontrada");
-                }
-                return familia;
+                return familia ?? throw new Exception("Familia não encontrada");
             }
-            catch(InvalidOperationException e)
+            catch (InvalidOperationException e)
             {
                 throw;
             }
@@ -39,24 +35,24 @@ namespace Projeto.Infra
             {
                return _session.Query<Familia>().ToList();
             }
-            catch(Exception ex)
+            catch (Exception)
             {
                 throw;
             }
         }
 
-        public void SalvarNova(Familia familia)
+        public void CadastrarNova(Familia familia)
         {
-            using (var transacao = _session.BeginTransaction())
+            using var transacao = _session.BeginTransaction();
             try
             {
                 _session.Save(familia);
                 transacao.Commit();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 transacao.Rollback();
-                throw ;
+                throw;
             }
         }
     }

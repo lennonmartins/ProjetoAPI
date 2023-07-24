@@ -8,6 +8,7 @@ namespace Projeto.Aplicacao.Familias
     {
         private readonly IFamiliaRepositorio _familiaRepositorio;
         private readonly IMapper _mapper;
+
         public CadastraFamilia(IFamiliaRepositorio familiaRepositorio, IMapper mapper)
         {
             _familiaRepositorio = familiaRepositorio;
@@ -16,7 +17,7 @@ namespace Projeto.Aplicacao.Familias
         public Familia Cadastrar(FamiliaRequestDto familiaRequestDto)
         {
             var familia = _mapper.Map<Familia>(familiaRequestDto);
-            _familiaRepositorio.SalvarNova(familia);
+            _familiaRepositorio.CadastrarNova(familia);
             return familia;
         }
     }

@@ -10,10 +10,11 @@ namespace Projeto.WebApi
     {
         public static void Configuracao(IServiceCollection services){
             services.AddScoped<IFamiliaRepositorio, FamiliaRepositorio>();
+            services.AddScoped<PontuacaoRepositorio>();
             services.AddScoped<ICadastraFamilia, CadastraFamilia>();
             services.AddScoped<GerenciadorDeCriterios>();
             services.AddScoped<ValidacaoDeCriteriosAtendidos>();
-            services.AddScoped<IObterFamilia, ObterFamilia>();
+            services.AddScoped<IObtemFamilia, ObtemFamilia>();
             services.AddScoped<IPontuaFamilia, PontuaFamilia>();
             services.AddScoped<IListaFamilia, ListaFamilia>();
             services.AddAutoMapper(typeof(AutoMapperProfile));

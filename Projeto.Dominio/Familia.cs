@@ -9,11 +9,7 @@
         public virtual string Cpf_responsavel { get; protected set; }
         public virtual decimal RendaTotalDaFamilia { get; protected set; }
         public virtual int QuantidadeDeDependentes { get; protected set; }
-        public virtual int Pontos { get; protected set; }
-        private readonly int RendaMaxima = 1500;
-        private readonly int RendaMinima = 900;
-        private readonly int MaximoDeDependentes = 3;
-        private readonly int MinimoDeDependentes = 1;
+      /*  public virtual Pontuacao IdPontuacao { get; protected set; }*/
 
         public Familia(string nomeDoResponsavel, string telefone, string cpf, decimal rendaTotalDaFamilia, int quantidadeDeDependentes)
         {
@@ -25,9 +21,10 @@
             Cpf_responsavel = cpf;  
             RendaTotalDaFamilia = rendaTotalDaFamilia;
             QuantidadeDeDependentes = quantidadeDeDependentes;
+
         }
 
-        protected Familia() { }
+        public Familia() { }
 
         private void ValidarNomeVazioOuNulo(string nome)
         {
@@ -51,33 +48,6 @@
             {
                 throw new ArgumentException("Responsável deve conter um CPF para registro.");
             }
-        }
-
-        public virtual bool PossuiRendaMenorQueAMinina()
-        {
-            return RendaTotalDaFamilia <= RendaMinima;
-        }
-
-        public virtual bool PossuiRendaEntreMininaEMaxima()
-        {
-            return RendaTotalDaFamilia > RendaMinima 
-                && RendaTotalDaFamilia <= RendaMaxima;
-        }
-
-        public virtual bool PossuiMinimoDeDependentes()
-        {
-            return QuantidadeDeDependentes >= MinimoDeDependentes 
-                && QuantidadeDeDependentes < MaximoDeDependentes;
-        }
-
-        public virtual bool PossuiMaximoDeDependentes()
-        {
-            return QuantidadeDeDependentes >= MaximoDeDependentes;
-        }
-
-        public virtual void AdicionarPontos(int pontos)
-        {
-            Pontos += pontos;   
         }
     }
 }

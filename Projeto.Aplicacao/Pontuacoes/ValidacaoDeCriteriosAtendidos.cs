@@ -11,13 +11,15 @@ namespace Projeto.Aplicacao.ServicoDePontuacao
             _criterios = criterios;
         }
 
-        public void ObterQuantidadeDePontos(Familia familia)
+        public Familia ObterQuantidadeDePontos(Familia familia, Pontuacao pontuacao)
         {
             var criterios = _criterios.ObterCriterioSetados();
-            foreach ( var criterio in criterios)
+            foreach (var criterio in criterios)
             {
-                criterio.ValidarCriteriosAtendidos(familia);
+                criterio.ValidarCriteriosAtendidos(familia, pontuacao);
             }
+
+            return familia;
         }
     }
 }

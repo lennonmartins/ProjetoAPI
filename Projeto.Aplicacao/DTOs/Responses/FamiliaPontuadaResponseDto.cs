@@ -1,8 +1,11 @@
-﻿namespace Projeto.Aplicacao.DTOs.Responses
+﻿using Projeto.Dominio;
+
+namespace Projeto.Aplicacao.DTOs.Responses
 {
     public class FamiliaPontuadaResponseDto
     {
         public string NomeDoResponsavel { get; set; }
-        public int Pontos { get; set; }
+        public Pontuacao Pontos { get; set; }
+        public string Telefone { get; set;}
     }
 }
