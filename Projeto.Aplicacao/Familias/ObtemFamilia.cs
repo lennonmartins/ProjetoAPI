@@ -2,7 +2,6 @@
 using Projeto.Aplicacao.DTOs.Responses;
 using Projeto.Aplicacao.ServicoDePontuacao;
 using Projeto.Dominio;
-using Projeto.Infra;
 
 namespace Projeto.Aplicacao.Familias
 {
@@ -11,21 +10,18 @@ namespace Projeto.Aplicacao.Familias
         private readonly IFamiliaRepositorio _familiaRepositorio;
         private readonly IPontuaFamilia _pontuaFamilia;
         private readonly IMapper _mapper;
-        private readonly PontuacaoRepositorio _pontuacaoRepositorio;
-        public ObtemFamilia(IFamiliaRepositorio familiaRepositorio, IPontuaFamilia pontuaFamilia, IMapper mapper, PontuacaoRepositorio pontuacaoRepositorio) 
+        public ObtemFamilia(IFamiliaRepositorio familiaRepositorio, IPontuaFamilia pontuaFamilia, IMapper mapper) 
         {
             _familiaRepositorio = familiaRepositorio;    
             _pontuaFamilia = pontuaFamilia;
             _mapper = mapper;
-            _pontuacaoRepositorio = pontuacaoRepositorio;
         }
-        public FamiliaPontuadaResponseDto ObterPeloCpfDoResponsavel(string cpfDoResponsavel)
+        public FamiliaPontuadaResponseDto ObterResponsavelPeloCpf(string cpfDoResponsavel)
         {
             var familiaRetornada = _familiaRepositorio.ObterPeloCpfDoResponsavel(cpfDoResponsavel);
-            var pontuacaoDaFamilia = _pontuacaoRepositorio.ObterPeloId(familiaRetornada.Id);
-            var familiaPontuada = _pontuaFamilia.PontuarPelosCriteriosAtendidos(familiaRetornada, pontuacaoDaFamilia);
-            var familiaReponsePontuada = _mapper.Map<FamiliaPontuadaResponseDto>(familiaPontuada);
-            return familiaReponsePontuada;
+            var familiaPontuada = _pontuaFamilia.PontuarPelosCriteriosAtendidos(familiaRetornada);
+            var familiaResponsePontuada = _mapper.Map<FamiliaPontuadaResponseDto>(familiaPontuada);
+            return familiaResponsePontuada;
         }
     }
 }

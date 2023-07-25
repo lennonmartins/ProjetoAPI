@@ -8,16 +8,16 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.3" />
-    <PackageReference Include="NSubstitute" Version="5.0.0" />
     <PackageReference Include="NUnit" Version="3.13.3" />
     <PackageReference Include="NUnit3TestAdapter" Version="4.5.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Projeto.Aplicacao\Projeto.Aplicacao.csproj" />
     <ProjectReference Include="..\Projeto.Dominio\Projeto.Dominio.csproj" />
-    <ProjectReference Include="..\Projeto.Infra\Projeto.Infra.csproj" />
-    <ProjectReference Include="..\Projeto.WebApi\Projeto.WebApi.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Aplicacao\" />
   </ItemGroup>
 
 </Project>

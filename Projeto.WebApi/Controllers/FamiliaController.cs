@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Projeto.Aplicacao.DTOs.Requests;
 using Projeto.Aplicacao.Familias;
-using Projeto.Aplicacao.ServicoDePontuacao;
 
 namespace Projeto.WebApi.Controllers
 {
@@ -10,12 +9,13 @@ namespace Projeto.WebApi.Controllers
     public class FamiliaController : ControllerBase
     {
         private readonly ICadastraFamilia _cadastraFamilia;
+       
         private readonly IObtemFamilia _obterFamilia;
 
-        public FamiliaController(ICadastraFamilia cadastraFamilia, IObtemFamilia obterFamilia)
+        public FamiliaController(ICadastraFamilia cadastraFamilia, IObtemFamilia obtemFamilia)
         {
             _cadastraFamilia = cadastraFamilia;
-            _obterFamilia = obterFamilia;   
+            _obterFamilia = obtemFamilia;
         }
 
         [HttpPost, Route("")]
@@ -28,8 +28,9 @@ namespace Projeto.WebApi.Controllers
         [HttpGet("porCpf/{cpfDoResponsavel}")]
         public IActionResult BuscarPeloCpfDoResponsavel(string cpfDoResponsavel)
         {
-            var familiaPontuadaRetornada = _obterFamilia.ObterPeloCpfDoResponsavel(cpfDoResponsavel);
+            var familiaPontuadaRetornada = _obterFamilia.ObterResponsavelPeloCpf(cpfDoResponsavel);
             return Ok(familiaPontuadaRetornada);
         }
+
     }
 }

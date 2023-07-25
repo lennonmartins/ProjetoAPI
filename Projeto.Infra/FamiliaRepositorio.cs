@@ -17,9 +17,10 @@ namespace Projeto.Infra
             try
             {
                 var familia = _session.Query<Familia>().Single(familia => familia.Cpf_responsavel == cpf);
+                
                 return familia ?? throw new Exception("Familia não encontrada");
             }
-            catch (InvalidOperationException e)
+            catch(InvalidOperationException e)
             {
                 throw;
             }
@@ -35,7 +36,7 @@ namespace Projeto.Infra
             {
                return _session.Query<Familia>().ToList();
             }
-            catch (Exception)
+            catch(Exception)
             {
                 throw;
             }

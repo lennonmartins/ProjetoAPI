@@ -7,11 +7,11 @@ namespace Projeto.WebApi.Controllers
     [Route("[controller]")]
     public class PontuacaoController : ControllerBase
     {
-    
+        
         private readonly IListaFamilia _listagemDeFamilias;
-  
+       
         public PontuacaoController( IListaFamilia listagemDeFamilia) 
-        {
+        {            
             _listagemDeFamilias = listagemDeFamilia;
         }
 

@@ -7,12 +7,14 @@ namespace Projeto.Aplicacao.Familias
     public class ListaFamilia : IListaFamilia
     {
         private readonly IFamiliaRepositorio _familiaRepositorio;
-        private readonly IObtemFamilia _obterFamilia;
+        private readonly IObtemFamilia _obtemFamilia;
+        private readonly IPontuaFamilia _pontuaFamilia;
 
-        public ListaFamilia(IFamiliaRepositorio familiaRepositorio, IObtemFamilia obterFamilia)
+        public ListaFamilia(IFamiliaRepositorio familiaRepositorio, IPontuaFamilia pontuaFamilia, IObtemFamilia obtemFamilia)
         {
             _familiaRepositorio = familiaRepositorio;
-            _obterFamilia = obterFamilia;
+            _pontuaFamilia = pontuaFamilia;
+            _obtemFamilia = obtemFamilia;
         }
 
         public List<FamiliaPontuadaResponseDto> ObterListaOrdenadaPorPontos()
@@ -28,7 +30,7 @@ namespace Projeto.Aplicacao.Familias
 
             foreach (var familia in familias)
             {
-                familiasPontuadas.Add(_obterFamilia.ObterPeloCpfDoResponsavel(familia.Cpf_responsavel));
+                familiasPontuadas.Add(_obtemFamilia.ObterResponsavelPeloCpf(familia.Cpf_responsavel));
             }
 
             var familiaPontuadasEOrdenadas = familiasPontuadas.OrderByDescending(f => f.Pontos).ToList();

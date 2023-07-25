@@ -6,7 +6,7 @@ namespace Projeto.Aplicacao.ServicoDePontuacao
     {
         private readonly int RendaMaxima = 1500;
         private readonly int RendaMinima = 900;
-        public void ValidarCriteriosAtendidos(Familia familia, Pontuacao pontuacao)
+        public void ValidarCriteriosAtendidos(Familia familia)
         {
             int pontos = 0;
             if (familia.RendaTotalDaFamilia > RendaMinima && familia.RendaTotalDaFamilia <= RendaMaxima)
@@ -17,7 +17,7 @@ namespace Projeto.Aplicacao.ServicoDePontuacao
             {
                 pontos = 5;
             }
-            pontuacao.AdicionarPontos(pontos);
+            familia.AdicionarPontos(pontos);
         }
     }
 }

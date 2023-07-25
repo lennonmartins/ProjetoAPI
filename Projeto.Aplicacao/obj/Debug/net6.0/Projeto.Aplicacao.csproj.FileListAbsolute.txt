@@ -13,6 +13,11 @@ C:\Users\LennonMartins\Desktop\Projeto\ProjetoAPI\Projeto.Aplicacao\obj\Debug\ne
 C:\Users\LennonMartins\Desktop\Projeto\ProjetoAPI\Projeto.Aplicacao\obj\Debug\net6.0\refint\Projeto.Aplicacao.dll
 C:\Users\LennonMartins\Desktop\Projeto\ProjetoAPI\Projeto.Aplicacao\obj\Debug\net6.0\Projeto.Aplicacao.pdb
 C:\Users\LennonMartins\Desktop\Projeto\ProjetoAPI\Projeto.Aplicacao\obj\Debug\net6.0\ref\Projeto.Aplicacao.dll
+C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.Aplicacao\obj\Debug\net6.0\Projeto.Aplicacao.csproj.AssemblyReference.cache
+C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.Aplicacao\obj\Debug\net6.0\Projeto.Aplicacao.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.Aplicacao\obj\Debug\net6.0\Projeto.Aplicacao.AssemblyInfoInputs.cache
+C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.Aplicacao\obj\Debug\net6.0\Projeto.Aplicacao.AssemblyInfo.cs
+C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.Aplicacao\obj\Debug\net6.0\Projeto.Aplicacao.csproj.CoreCompileInputs.cache
 C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.Aplicacao\bin\Debug\net6.0\Projeto.Aplicacao.deps.json
 C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.Aplicacao\bin\Debug\net6.0\Projeto.Aplicacao.dll
 C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.Aplicacao\bin\Debug\net6.0\Projeto.Aplicacao.pdb
@@ -20,11 +25,6 @@ C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.Aplicacao\bin\Debug\ne
 C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.Aplicacao\bin\Debug\net6.0\Projeto.Infra.dll
 C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.Aplicacao\bin\Debug\net6.0\Projeto.Dominio.pdb
 C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.Aplicacao\bin\Debug\net6.0\Projeto.Infra.pdb
-C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.Aplicacao\obj\Debug\net6.0\Projeto.Aplicacao.csproj.AssemblyReference.cache
-C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.Aplicacao\obj\Debug\net6.0\Projeto.Aplicacao.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.Aplicacao\obj\Debug\net6.0\Projeto.Aplicacao.AssemblyInfoInputs.cache
-C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.Aplicacao\obj\Debug\net6.0\Projeto.Aplicacao.AssemblyInfo.cs
-C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.Aplicacao\obj\Debug\net6.0\Projeto.Aplicacao.csproj.CoreCompileInputs.cache
 C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.Aplicacao\obj\Debug\net6.0\Projeto.Aplicacao.csproj.CopyComplete
 C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.Aplicacao\obj\Debug\net6.0\Projeto.Aplicacao.dll
 C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.Aplicacao\obj\Debug\net6.0\refint\Projeto.Aplicacao.dll

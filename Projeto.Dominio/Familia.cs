@@ -9,8 +9,8 @@
         public virtual string Cpf_responsavel { get; protected set; }
         public virtual decimal RendaTotalDaFamilia { get; protected set; }
         public virtual int QuantidadeDeDependentes { get; protected set; }
-      /*  public virtual Pontuacao IdPontuacao { get; protected set; }*/
-
+        public virtual int Pontos { get; protected set; }
+  
         public Familia(string nomeDoResponsavel, string telefone, string cpf, decimal rendaTotalDaFamilia, int quantidadeDeDependentes)
         {
             ValidarNomeVazioOuNulo(nomeDoResponsavel);
@@ -21,10 +21,9 @@
             Cpf_responsavel = cpf;  
             RendaTotalDaFamilia = rendaTotalDaFamilia;
             QuantidadeDeDependentes = quantidadeDeDependentes;
-
         }
 
-        public Familia() { }
+        protected Familia() { }
 
         private void ValidarNomeVazioOuNulo(string nome)
         {
@@ -48,6 +47,11 @@
             {
                 throw new ArgumentException("Responsável deve conter um CPF para registro.");
             }
+        }
+
+        public virtual void AdicionarPontos(int pontos)
+        {
+            Pontos += pontos;   
         }
     }
 }

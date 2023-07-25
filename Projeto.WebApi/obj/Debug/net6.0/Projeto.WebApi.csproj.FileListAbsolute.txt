@@ -34,6 +34,12 @@ C:\Users\LennonMartins\Desktop\Projeto\ProjetoAPI\Projeto.WebApi\obj\Debug\net6.
 C:\Users\LennonMartins\Desktop\Projeto\ProjetoAPI\Projeto.WebApi\obj\Debug\net6.0\Projeto.WebApi.pdb
 C:\Users\LennonMartins\Desktop\Projeto\ProjetoAPI\Projeto.WebApi\obj\Debug\net6.0\Projeto.WebApi.genruntimeconfig.cache
 C:\Users\LennonMartins\Desktop\Projeto\ProjetoAPI\Projeto.WebApi\obj\Debug\net6.0\ref\Projeto.WebApi.dll
+C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.WebApi\obj\Debug\net6.0\Projeto.WebApi.csproj.AssemblyReference.cache
+C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.WebApi\obj\Debug\net6.0\Projeto.WebApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.WebApi\obj\Debug\net6.0\Projeto.WebApi.AssemblyInfoInputs.cache
+C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.WebApi\obj\Debug\net6.0\Projeto.WebApi.AssemblyInfo.cs
+C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.WebApi\obj\Debug\net6.0\Projeto.WebApi.csproj.CoreCompileInputs.cache
+C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.WebApi\obj\Debug\net6.0\Projeto.WebApi.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.WebApi\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.WebApi\bin\Debug\net6.0\appsettings.json
 C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.WebApi\bin\Debug\net6.0\Projeto.WebApi.exe
@@ -117,13 +123,6 @@ C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.WebApi\bin\Debug\net6.
 C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.WebApi\bin\Debug\net6.0\Projeto.Aplicacao.pdb
 C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.WebApi\bin\Debug\net6.0\Projeto.Dominio.pdb
 C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.WebApi\bin\Debug\net6.0\Projeto.Infra.pdb
-C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.WebApi\obj\Debug\net6.0\Projeto.WebApi.csproj.AssemblyReference.cache
-C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.WebApi\obj\Debug\net6.0\Projeto.WebApi.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.WebApi\obj\Debug\net6.0\Projeto.WebApi.AssemblyInfoInputs.cache
-C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.WebApi\obj\Debug\net6.0\Projeto.WebApi.AssemblyInfo.cs
-C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.WebApi\obj\Debug\net6.0\Projeto.WebApi.csproj.CoreCompileInputs.cache
-C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.WebApi\obj\Debug\net6.0\Projeto.WebApi.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.WebApi\obj\Debug\net6.0\Projeto.WebApi.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.WebApi\obj\Debug\net6.0\staticwebassets\msbuild.Projeto.WebApi.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.WebApi\obj\Debug\net6.0\staticwebassets\msbuild.build.Projeto.WebApi.props
 C:\Users\LennonMartins\source\repos\ProjetoLennon\Projeto.WebApi\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Projeto.WebApi.props

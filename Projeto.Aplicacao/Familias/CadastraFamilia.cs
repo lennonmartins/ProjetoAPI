@@ -8,7 +8,6 @@ namespace Projeto.Aplicacao.Familias
     {
         private readonly IFamiliaRepositorio _familiaRepositorio;
         private readonly IMapper _mapper;
-
         public CadastraFamilia(IFamiliaRepositorio familiaRepositorio, IMapper mapper)
         {
             _familiaRepositorio = familiaRepositorio;

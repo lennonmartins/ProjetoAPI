@@ -5,6 +5,6 @@ namespace Projeto.Aplicacao.Familias
 {
     public interface IObtemFamilia
     {
-        FamiliaPontuadaResponseDto ObterPeloCpfDoResponsavel(string cpfDoResponsavel);
+        FamiliaPontuadaResponseDto  ObterResponsavelPeloCpf(string cpfDoResponsavel);
     }
 }
