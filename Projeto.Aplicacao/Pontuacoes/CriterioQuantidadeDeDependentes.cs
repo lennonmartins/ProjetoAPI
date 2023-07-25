@@ -1,4 +1,4 @@
-﻿using Projeto.Dominio;
+﻿using Projeto.Dominio.Familias;
 
 namespace Projeto.Aplicacao.ServicoDePontuacao
 {
@@ -17,7 +17,7 @@ namespace Projeto.Aplicacao.ServicoDePontuacao
             {
                 pontos = 2;
             }
-            familia.AdicionarPontos(pontos);
+           
         }
     }
 }

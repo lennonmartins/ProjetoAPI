@@ -1,16 +1,18 @@
-﻿namespace Projeto.Dominio
+﻿using Projeto.Dominio.Pontuacoes;
+
+namespace Projeto.Dominio.Familias
 {
     public class Familia
     {
         private int _id;
-        public virtual int Id { get { return _id; } } 
+        public virtual int Id { get { return _id; } }
         public virtual string NomeDoResponsavel { get; protected set; }
-        public virtual string Telefone { get; protected set; }    
+        public virtual string Telefone { get; protected set; }
         public virtual string Cpf_responsavel { get; protected set; }
         public virtual decimal RendaTotalDaFamilia { get; protected set; }
         public virtual int QuantidadeDeDependentes { get; protected set; }
-        public virtual int Pontos { get; protected set; }
-  
+        public virtual List<Pontuacao> Pontos { get; protected set; }
+
         public Familia(string nomeDoResponsavel, string telefone, string cpf, decimal rendaTotalDaFamilia, int quantidadeDeDependentes)
         {
             ValidarNomeVazioOuNulo(nomeDoResponsavel);
@@ -18,7 +20,7 @@
             ValidarSeCpfVazioOuNulo(cpf);
             NomeDoResponsavel = nomeDoResponsavel;
             Telefone = telefone;
-            Cpf_responsavel = cpf;  
+            Cpf_responsavel = cpf;
             RendaTotalDaFamilia = rendaTotalDaFamilia;
             QuantidadeDeDependentes = quantidadeDeDependentes;
         }
@@ -49,9 +51,6 @@
             }
         }
 
-        public virtual void AdicionarPontos(int pontos)
-        {
-            Pontos += pontos;   
-        }
+        
     }
 }

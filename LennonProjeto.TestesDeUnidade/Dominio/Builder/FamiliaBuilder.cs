@@ -1,4 +1,4 @@
-﻿using Projeto.Dominio;
+﻿using Projeto.Dominio.Familias;
 
 namespace Projeto.TestesDeUnidade.Dominio.Builder
 {

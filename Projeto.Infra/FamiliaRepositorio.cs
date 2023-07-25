@@ -1,5 +1,5 @@
 ﻿using NHibernate;
-using Projeto.Dominio;
+using Projeto.Dominio.Familias;
 
 namespace Projeto.Infra
 {

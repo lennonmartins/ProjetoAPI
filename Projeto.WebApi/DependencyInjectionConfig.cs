@@ -1,6 +1,6 @@
 ﻿using Projeto.Aplicacao.Familias;
 using Projeto.Aplicacao.ServicoDePontuacao;
-using Projeto.Dominio;
+using Projeto.Dominio.Familias;
 using Projeto.Infra;
 using Projeto.WebApi.AutoMapper;
 

@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Projeto.Aplicacao.DTOs.Responses;
 using Projeto.Aplicacao.ServicoDePontuacao;
-using Projeto.Dominio;
+using Projeto.Dominio.Familias;
 
 namespace Projeto.Aplicacao.Familias
 {

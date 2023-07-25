@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using Projeto.Dominio;
+using Projeto.Dominio.Familias;
 using Projeto.TestesDeUnidade.Dominio.Builder;
 
 namespace Projeto.TestesDeUnidade.Dominio
@@ -51,7 +51,7 @@ namespace Projeto.TestesDeUnidade.Dominio
             Assert.Throws<ArgumentException>(familiaEsperada);
         }
 
-        [Test]
+        /*[Test]
         public void Deve_adicionar_pontos_a_familia()
         {
             int pontosEsperados = 5;
@@ -60,6 +60,6 @@ namespace Projeto.TestesDeUnidade.Dominio
             familiaCriada.AdicionarPontos(pontosEsperados);
 
             Assert.AreEqual(pontosEsperados, familiaCriada.Pontos);
-        }
+        }*/
     }
 }
