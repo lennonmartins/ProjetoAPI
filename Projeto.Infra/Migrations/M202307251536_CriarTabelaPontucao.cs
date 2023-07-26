@@ -7,13 +7,11 @@ namespace Projeto.Infra.Migrations
     [Migration(202307251536)]
     public class M202307251536_CriarTabelaPontucao : Migration
     {
-
         private readonly string NomeDaTabela = "Pontuacao";
         private readonly string ColunaId = "IdPontuacao";
         private readonly string ColunaPontuacao = "Pontuacao";
         private readonly string ColunaRegistro = "RegistroPontuacao";
         private readonly string ColunaIdFamilia = "IdFamilia";
-
 
         public override void Up()
         {
@@ -34,6 +32,5 @@ namespace Projeto.Infra.Migrations
         {
             Delete.Table(NomeDaTabela);
         }
-    
     }
 }

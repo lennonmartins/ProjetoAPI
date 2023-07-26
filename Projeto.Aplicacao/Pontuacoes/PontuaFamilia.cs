@@ -16,6 +16,7 @@ namespace Projeto.Aplicacao.ServicoDePontuacao
         public Familia PontuarPelosCriteriosAtendidos(Familia familia)
         {
             var familiaPontuada = _validacaoDeCriterios.ObterQuantidadeDePontos(familia);
+
             return familiaPontuada;
         }
     }

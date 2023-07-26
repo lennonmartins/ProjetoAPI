@@ -1,4 +1,5 @@
 ﻿using Projeto.Dominio.Familias;
+using Projeto.Dominio.Pontuacoes;
 
 namespace Projeto.Aplicacao.ServicoDePontuacao
 {
@@ -6,7 +7,8 @@ namespace Projeto.Aplicacao.ServicoDePontuacao
     {
         private readonly int MaximoDeDependentes = 3;
         private readonly int MinimoDeDependentes = 1;
-        public void ValidarCriteriosAtendidos(Familia familia)
+
+        public int ValidarCriteriosAtendidos(Familia familia)
         {
             int pontos = 0;
             if (familia.QuantidadeDeDependentes >= MaximoDeDependentes)
@@ -17,7 +19,7 @@ namespace Projeto.Aplicacao.ServicoDePontuacao
             {
                 pontos = 2;
             }
-           
+            return pontos;
         }
     }
 }

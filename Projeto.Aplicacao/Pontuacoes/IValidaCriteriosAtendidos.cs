@@ -1,9 +1,10 @@
 ﻿using Projeto.Dominio.Familias;
+using Projeto.Dominio.Pontuacoes;
 
 namespace Projeto.Aplicacao.ServicoDePontuacao
 {
     public interface IValidaCriteriosAtendidos
     {
-        void ValidarCriteriosAtendidos(Familia familia);
+        int ValidarCriteriosAtendidos(Familia familia);
     }
 }

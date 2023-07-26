@@ -20,7 +20,12 @@ namespace Projeto.Aplicacao.Familias
         {
             var familiaRetornada = _familiaRepositorio.ObterPeloCpfDoResponsavel(cpfDoResponsavel);
             var familiaPontuada = _pontuaFamilia.PontuarPelosCriteriosAtendidos(familiaRetornada);
-            var familiaResponsePontuada = _mapper.Map<FamiliaPontuadaResponseDto>(familiaPontuada);
+            var familiaResponsePontuada = new FamiliaPontuadaResponseDto
+            {
+                NomeDoResponsavel = familiaPontuada.NomeDoResponsavel,
+                Pontos = familiaPontuada.Pontos.Last().Pontos,
+            };
+               /* _mapper.Map<FamiliaPontuadaResponseDto>(familiaPontuada);*/
             return familiaResponsePontuada;
         }
     }
