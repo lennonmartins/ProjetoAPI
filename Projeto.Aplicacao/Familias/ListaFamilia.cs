@@ -1,5 +1,4 @@
 ﻿using Projeto.Aplicacao.DTOs.Responses;
-using Projeto.Aplicacao.ServicoDePontuacao;
 using Projeto.Dominio.Familias;
 
 namespace Projeto.Aplicacao.Familias
@@ -8,12 +7,10 @@ namespace Projeto.Aplicacao.Familias
     {
         private readonly IFamiliaRepositorio _familiaRepositorio;
         private readonly IObtemFamilia _obtemFamilia;
-        private readonly IPontuaFamilia _pontuaFamilia;
 
-        public ListaFamilia(IFamiliaRepositorio familiaRepositorio, IPontuaFamilia pontuaFamilia, IObtemFamilia obtemFamilia)
+        public ListaFamilia(IFamiliaRepositorio familiaRepositorio, IObtemFamilia obtemFamilia)
         {
             _familiaRepositorio = familiaRepositorio;
-            _pontuaFamilia = pontuaFamilia;
             _obtemFamilia = obtemFamilia;
         }
 
@@ -30,7 +27,7 @@ namespace Projeto.Aplicacao.Familias
 
             foreach (var familia in familias)
             {
-                familiasPontuadas.Add(_obtemFamilia.ObterResponsavelPeloCpf(familia.Cpf_responsavel));
+                familiasPontuadas.Add(_obtemFamilia.ObterComPontuacaoPeloCpfDoResponsavel(familia.Cpf_responsavel));
             }
 
             var familiaPontuadasEOrdenadas = familiasPontuadas.OrderByDescending(f => f.Pontos).ToList();

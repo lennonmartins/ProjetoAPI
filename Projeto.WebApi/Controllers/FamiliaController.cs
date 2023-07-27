@@ -28,7 +28,7 @@ namespace Projeto.WebApi.Controllers
         [HttpGet("porCpf/{cpfDoResponsavel}")]
         public IActionResult BuscarPeloCpfDoResponsavel(string cpfDoResponsavel)
         {
-            var familiaPontuadaRetornada = _obterFamilia.ObterResponsavelPeloCpf(cpfDoResponsavel);
+            var familiaPontuadaRetornada = _obterFamilia.ObterComPontuacaoPeloCpfDoResponsavel(cpfDoResponsavel);
             return Ok(familiaPontuadaRetornada);
         }
 

@@ -1,4 +1,5 @@
 ﻿using Projeto.Dominio.Familias;
+using Projeto.Dominio.Pontuacoes;
 
 namespace Projeto.TestesDeUnidade.Dominio.Builder
 {
@@ -9,6 +10,7 @@ namespace Projeto.TestesDeUnidade.Dominio.Builder
         public virtual string Cpf_responsavel { get;  set; }
         public virtual decimal RendaTotalDaFamilia { get;  set; }
         public virtual int QuantidadeDeDependentes { get;  set; }
+        public virtual List<Pontuacao> _pontos { get; protected set; }
 
         public FamiliaBuilder()
         {
@@ -17,11 +19,16 @@ namespace Projeto.TestesDeUnidade.Dominio.Builder
             Cpf_responsavel = "01756232288";
             RendaTotalDaFamilia = 1500;
             QuantidadeDeDependentes = 1;
+            _pontos = new List<Pontuacao>();
         }
 
         public Familia Criar()
         {
             var familia = new Familia(NomeDoResponsavel, Telefone, Cpf_responsavel, RendaTotalDaFamilia, QuantidadeDeDependentes);
+            if (_pontos.Any())
+            {
+                familia.AdiconarPontucao(_pontos.Last());
+            }
             return familia;
         }
 
@@ -40,6 +47,12 @@ namespace Projeto.TestesDeUnidade.Dominio.Builder
         public FamiliaBuilder ComNome(string nome)
         {
             NomeDoResponsavel = nome;   
+            return this;
+        }
+
+        public FamiliaBuilder ComPontos(Pontuacao pontos)
+        {
+            _pontos.Add(pontos);
             return this;
         }
     }

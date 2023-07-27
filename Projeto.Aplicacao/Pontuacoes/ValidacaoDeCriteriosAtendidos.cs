@@ -23,6 +23,7 @@ namespace Projeto.Aplicacao.ServicoDePontuacao
             }
             pontuacao.AdicionarPontos(pontos);
             familia.AdiconarPontucao(pontuacao);
+            //salvar atualização em fmailia;
             return familia;
         }
     }

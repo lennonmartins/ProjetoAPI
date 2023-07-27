@@ -1,6 +1,4 @@
-﻿using Projeto.Aplicacao.DTOs.Responses;
-using Projeto.Dominio.Familias;
-using Projeto.Dominio.Pontuacoes;
+﻿using Projeto.Dominio.Familias;
 
 namespace Projeto.Aplicacao.ServicoDePontuacao
 {

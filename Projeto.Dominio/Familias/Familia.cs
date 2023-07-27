@@ -11,7 +11,8 @@ namespace Projeto.Dominio.Familias
         public virtual string Cpf_responsavel { get; protected set; }
         public virtual decimal RendaTotalDaFamilia { get; protected set; }
         public virtual int QuantidadeDeDependentes { get; protected set; }
-        public virtual List<Pontuacao> Pontos { get; protected set; } = new List<Pontuacao>();
+        private readonly IList<Pontuacao> _pontos = new List<Pontuacao>();
+        public virtual IEnumerable<Pontuacao> Pontos  => _pontos;
 
         public Familia(string nomeDoResponsavel, string telefone, string cpf, decimal rendaTotalDaFamilia, int quantidadeDeDependentes)
         {
@@ -53,7 +54,7 @@ namespace Projeto.Dominio.Familias
 
         public virtual void AdiconarPontucao(Pontuacao pontuacao)
         {
-            Pontos.Add(pontuacao);
+          _pontos.Add(pontuacao);
         }
         
     }
