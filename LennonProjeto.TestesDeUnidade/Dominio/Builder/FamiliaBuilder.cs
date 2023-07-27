@@ -55,5 +55,17 @@ namespace Projeto.TestesDeUnidade.Dominio.Builder
             _pontos.Add(pontos);
             return this;
         }
+
+        public FamiliaBuilder ComRenda(decimal renda)
+        {
+            RendaTotalDaFamilia = renda;
+            return this;
+        }
+
+        public FamiliaBuilder ComDependentes(int dependentes)
+        {
+            QuantidadeDeDependentes = dependentes;  
+            return this;
+        }
     }
 }

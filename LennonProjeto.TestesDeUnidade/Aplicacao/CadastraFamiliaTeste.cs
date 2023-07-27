@@ -34,14 +34,24 @@ namespace Projeto.TestesDeUnidade.Aplicacao
                 QuantidadeDeDependentes = 1,
                 RendaTotalDaFamilia = 1500
             };
-            var familia = new FamiliaBuilder().ComNome(familiaDto.NomeDoResponsavel).Criar();
+            var familia = new FamiliaBuilder()
+                    .ComNome(familiaDto.NomeDoResponsavel)
+                    .ComCpf(familiaDto.Cpf_responsavel)
+                    .ComTelefone(familiaDto.Telefone)
+                    .ComRenda(familiaDto.RendaTotalDaFamilia)
+                    .ComDependentes(familiaDto.QuantidadeDeDependentes)
+                    .Criar();
 
             _mapper.Map<Familia>(Arg.Any<FamiliaRequestDto>()).Returns(familia);
             _familiaRepositorio.CadastrarNova(Arg.Any<Familia>());
             _cadastraFamilia.Cadastrar(familiaDto);
 
             _familiaRepositorio.Received(1).CadastrarNova(Arg.Is<Familia>(familia =>
-                                familia.NomeDoResponsavel == familiaDto.NomeDoResponsavel));
+                                familia.NomeDoResponsavel == familiaDto.NomeDoResponsavel &&
+                                familia.Cpf_responsavel == familiaDto.Cpf_responsavel &&
+                                familia.RendaTotalDaFamilia ==  familiaDto.RendaTotalDaFamilia &&
+                                familia.Telefone == familiaDto.Telefone &&
+                                familia.QuantidadeDeDependentes == familiaDto.QuantidadeDeDependentes));
         }
     }
 }

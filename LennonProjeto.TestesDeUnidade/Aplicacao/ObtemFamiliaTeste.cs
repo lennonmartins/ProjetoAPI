@@ -35,6 +35,7 @@ namespace Projeto.TestesDeUnidade.Aplicacao
             var familiaDto = _obtemFamilia.ObterComPontuacaoPeloCpfDoResponsavel(Arg.Any<string>());
 
             Assert.AreEqual(familiaDto.NomeDoResponsavel, familia.NomeDoResponsavel);
+            Assert.AreEqual(familiaDto.Pontos, familia.Pontos.Last().Pontos);
         }
     }
 }
