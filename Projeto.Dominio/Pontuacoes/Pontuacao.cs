@@ -1,4 +1,6 @@
-﻿namespace Projeto.Dominio.Pontuacoes
+﻿using Projeto.Dominio.Familias;
+
+namespace Projeto.Dominio.Pontuacoes
 {
     public class Pontuacao
     {
@@ -6,10 +8,10 @@
         public virtual int Id { get { return _id; } }
         public virtual int Pontos { get; protected set; }
         public virtual DateTime DataDeRegistroDaSolicitacao { get; protected set; }
+        public virtual Familia Familia { get; }
 
-        public Pontuacao(int pontos)
+        public Pontuacao()
         {
-            Pontos = pontos;
             DataDeRegistroDaSolicitacao = DateTime.Now;
         }
 

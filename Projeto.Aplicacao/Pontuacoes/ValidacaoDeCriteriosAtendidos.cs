@@ -1,5 +1,4 @@
 ﻿using Projeto.Dominio.Familias;
-using Projeto.Dominio.Pontuacoes;
 
 namespace Projeto.Aplicacao.ServicoDePontuacao
 {
@@ -12,19 +11,15 @@ namespace Projeto.Aplicacao.ServicoDePontuacao
             _criterios = criterios;
         }
 
-        public Familia ObterQuantidadeDePontos(Familia familia)
+        public int ObterQuantidadeDePontos(Familia familia)
         {
             int pontos = 0;
-            var pontuacao = new Pontuacao(pontos);
             var criterios = _criterios.ObterCriterioSetados();
             foreach ( var criterio in criterios)
             {
-              pontos +=  criterio.ValidarCriteriosAtendidos(familia);
+              pontos += criterio.ValidarCriteriosAtendidos(familia);
             }
-            pontuacao.AdicionarPontos(pontos);
-            familia.AdiconarPontucao(pontuacao);
-            //salvar atualização em fmailia;
-            return familia;
+            return pontos;
         }
     }
 }

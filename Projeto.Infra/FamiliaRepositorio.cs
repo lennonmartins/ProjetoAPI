@@ -56,5 +56,20 @@ namespace Projeto.Infra
                 throw;
             }
         }
+
+        public void Atualizar(Familia familia)
+        {
+            using var transacao = _session.BeginTransaction();
+            try
+            {
+                _session.Update(familia);
+                transacao.Commit();
+            }
+            catch
+            {
+                transacao.Rollback();
+                throw;
+            }
+        }
     }
 }
