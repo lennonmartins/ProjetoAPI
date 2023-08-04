@@ -9,6 +9,7 @@ namespace Projeto.WebApi.Controllers
     public class FamiliaController : ControllerBase
     {
         private readonly ICadastraFamilia _cadastraFamilia;
+        private readonly AtualizaFamilia _atualizaFamilia;
        
         private readonly IObtemFamilia _obterFamilia;
 
@@ -30,6 +31,13 @@ namespace Projeto.WebApi.Controllers
         {
             var familiaPontuadaRetornada = _obterFamilia.ObterComPontuacaoPeloCpfDoResponsavel(cpfDoResponsavel);
             return Ok(familiaPontuadaRetornada);
+        }
+
+        [HttpPut("/atualizar")]
+        public IActionResult Atualizar([FromBody] FamiliaRequestDto familiaRequestDto)
+        {
+            var familiaAtualizada = _atualizaFamilia.Atualizar(familiaRequestDto);
+            return Ok(familiaAtualizada);
         }
 
     }

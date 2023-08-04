@@ -3,13 +3,12 @@ using Projeto.Dominio.Familias;
 
 namespace Projeto.Infra
 {
-    public class FamiliaRepositorio : IFamiliaRepositorio
+    public class FamiliaRepositorio : RepositorioBaseNh<Familia>, IFamiliaRepositorio 
     {
         private readonly ISession _session;
 
-        public FamiliaRepositorio(ISession session)
+        public FamiliaRepositorio(ISession session) : base(session) 
         {
-            _session = session;
         }
 
         public Familia ObterPeloCpfDoResponsavel(string cpf)
@@ -70,16 +69,6 @@ namespace Projeto.Infra
                 transacao.Rollback();
                 throw;
             }
-        }
-
-        public void Deletar(Familia familia)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Familia ObterPor(int id)
-        {
-            throw new NotImplementedException();
         }
     }
 }

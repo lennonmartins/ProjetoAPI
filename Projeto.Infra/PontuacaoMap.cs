@@ -10,7 +10,7 @@ namespace Projeto.Infra
             Id(pontuacao => pontuacao.Id)
                 .GeneratedBy.Identity()
                 .UnsavedValue(0)
-                .Access.CamelCaseField(Prefix.Underscore).Column("IdPontuacao");
+                .Column("IdPontuacao");
 
             Map(pontuacao => pontuacao.Pontos).Column("Pontuacao");
             Map(pontuacao => pontuacao.DataDeRegistroDaSolicitacao).Column("RegistroPontuacao");

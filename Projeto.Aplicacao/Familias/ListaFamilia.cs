@@ -21,7 +21,7 @@ namespace Projeto.Aplicacao.Familias
             return familiasOrdenadasPorPontos;
         }
 
-        private List<FamiliaPontuadaResponseDto> OrdernarPelaPontuacao(List<Familia> familias)
+        private List<FamiliaPontuadaResponseDto> OrdernarPelaPontuacao(IEnumerable<Familia> familias)
         {
             var familiasPontuadas = new List<FamiliaPontuadaResponseDto>();
 

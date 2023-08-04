@@ -1,8 +1,3 @@
-C:\Users\LennonMartins\source\repos\ProjetoLennon\LennonProjeto.TestesDeUnidade\obj\Debug\net6.0\Projeto.TestesDeUnidade.csproj.AssemblyReference.cache
-C:\Users\LennonMartins\source\repos\ProjetoLennon\LennonProjeto.TestesDeUnidade\obj\Debug\net6.0\Projeto.TestesDeUnidade.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\LennonMartins\source\repos\ProjetoLennon\LennonProjeto.TestesDeUnidade\obj\Debug\net6.0\Projeto.TestesDeUnidade.AssemblyInfoInputs.cache
-C:\Users\LennonMartins\source\repos\ProjetoLennon\LennonProjeto.TestesDeUnidade\obj\Debug\net6.0\Projeto.TestesDeUnidade.AssemblyInfo.cs
-C:\Users\LennonMartins\source\repos\ProjetoLennon\LennonProjeto.TestesDeUnidade\obj\Debug\net6.0\Projeto.TestesDeUnidade.csproj.CoreCompileInputs.cache
 C:\Users\LennonMartins\source\repos\ProjetoLennon\LennonProjeto.TestesDeUnidade\bin\Debug\net6.0\testhost.dll
 C:\Users\LennonMartins\source\repos\ProjetoLennon\LennonProjeto.TestesDeUnidade\bin\Debug\net6.0\testhost.exe
 C:\Users\LennonMartins\source\repos\ProjetoLennon\LennonProjeto.TestesDeUnidade\bin\Debug\net6.0\NUnit3.TestAdapter.dll
@@ -166,6 +161,11 @@ C:\Users\LennonMartins\source\repos\ProjetoLennon\LennonProjeto.TestesDeUnidade\
 C:\Users\LennonMartins\source\repos\ProjetoLennon\LennonProjeto.TestesDeUnidade\bin\Debug\net6.0\Projeto.Aplicacao.pdb
 C:\Users\LennonMartins\source\repos\ProjetoLennon\LennonProjeto.TestesDeUnidade\bin\Debug\net6.0\Projeto.Dominio.pdb
 C:\Users\LennonMartins\source\repos\ProjetoLennon\LennonProjeto.TestesDeUnidade\bin\Debug\net6.0\Projeto.Infra.pdb
+C:\Users\LennonMartins\source\repos\ProjetoLennon\LennonProjeto.TestesDeUnidade\obj\Debug\net6.0\Projeto.TestesDeUnidade.csproj.AssemblyReference.cache
+C:\Users\LennonMartins\source\repos\ProjetoLennon\LennonProjeto.TestesDeUnidade\obj\Debug\net6.0\Projeto.TestesDeUnidade.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LennonMartins\source\repos\ProjetoLennon\LennonProjeto.TestesDeUnidade\obj\Debug\net6.0\Projeto.TestesDeUnidade.AssemblyInfoInputs.cache
+C:\Users\LennonMartins\source\repos\ProjetoLennon\LennonProjeto.TestesDeUnidade\obj\Debug\net6.0\Projeto.TestesDeUnidade.AssemblyInfo.cs
+C:\Users\LennonMartins\source\repos\ProjetoLennon\LennonProjeto.TestesDeUnidade\obj\Debug\net6.0\Projeto.TestesDeUnidade.csproj.CoreCompileInputs.cache
 C:\Users\LennonMartins\source\repos\ProjetoLennon\LennonProjeto.TestesDeUnidade\obj\Debug\net6.0\Projeto.TestesDeUnidade.csproj.CopyComplete
 C:\Users\LennonMartins\source\repos\ProjetoLennon\LennonProjeto.TestesDeUnidade\obj\Debug\net6.0\Projeto.TestesDeUnidade.dll
 C:\Users\LennonMartins\source\repos\ProjetoLennon\LennonProjeto.TestesDeUnidade\obj\Debug\net6.0\refint\Projeto.TestesDeUnidade.dll
