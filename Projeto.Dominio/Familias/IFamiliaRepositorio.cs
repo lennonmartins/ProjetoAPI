@@ -1,10 +1,7 @@
 ﻿namespace Projeto.Dominio.Familias
 {
-    public interface IFamiliaRepositorio
+    public interface IFamiliaRepositorio : RepositorioBase<Familia>
     {
-        void CadastrarNova(Familia familia);
-        Familia ObterPeloCpfDoResponsavel(string cpf);
-        List<Familia> ObterTodas();
-        void Atualizar(Familia familia);
+        public Familia ObterPeloCpfDoResponsavel(string cpf);
     }
 }

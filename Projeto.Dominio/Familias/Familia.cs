@@ -54,8 +54,14 @@ namespace Projeto.Dominio.Familias
 
         public virtual void AdiconarPontucao(Pontuacao pontuacao)
         {
-          _pontos.Add(pontuacao);
+            _pontos.Add(pontuacao);
+            SetarPontuacao(pontuacao);
         }
+
+        private void SetarPontuacao(Pontuacao pontuacao)
+        {
+            pontuacao.AtribuiFamilia(this);
+        } 
         
     }
 }

@@ -30,7 +30,7 @@ namespace Projeto.Infra
             }
         }
 
-        public List<Familia> ObterTodas()
+        public IEnumerable<Familia> ObterTodas()
         {
             try
             {
@@ -38,21 +38,6 @@ namespace Projeto.Infra
             }
             catch(Exception)
             {
-                throw;
-            }
-        }
-
-        public void CadastrarNova(Familia familia)
-        {
-            using var transacao = _session.BeginTransaction();
-            try
-            {
-                _session.Save(familia);
-                transacao.Commit();
-            }
-            catch (Exception ex)
-            {
-                transacao.Rollback();
                 throw;
             }
         }
@@ -70,6 +55,31 @@ namespace Projeto.Infra
                 transacao.Rollback();
                 throw;
             }
+        }
+
+        public void Salvar(Familia familia)
+        {
+            using var transacao = _session.BeginTransaction();
+            try
+            {
+                _session.Save(familia);
+                transacao.Commit();
+            }
+            catch (Exception ex)
+            {
+                transacao.Rollback();
+                throw;
+            }
+        }
+
+        public void Deletar(Familia familia)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Familia ObterPor(int id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -3,7 +3,6 @@ using NUnit.Framework;
 using Projeto.Aplicacao.Familias;
 using Projeto.Aplicacao.ServicoDePontuacao;
 using Projeto.Dominio.Familias;
-using Projeto.Dominio.Pontuacoes;
 using Projeto.TestesDeUnidade.Dominio.Builder;
 
 namespace Projeto.TestesDeUnidade.Aplicacao
@@ -27,8 +26,7 @@ namespace Projeto.TestesDeUnidade.Aplicacao
         public void Deve_obter_uma_familia()
         {
             int pontos = 5;
-            var familia = new FamiliaBuilder().ComPontos(new Pontuacao(pontos)).Criar();
-
+            var familia = new FamiliaBuilder().ComPontos(pontos).Criar();
             _familiaRepositorio.ObterPeloCpfDoResponsavel(Arg.Any<string>()).Returns(familia);
             _pontuaFamilia.PontuarPelosCriteriosAtendidos(Arg.Any<Familia>()).Returns(familia);
             

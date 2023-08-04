@@ -43,10 +43,10 @@ namespace Projeto.TestesDeUnidade.Aplicacao
                     .Criar();
 
             _mapper.Map<Familia>(Arg.Any<FamiliaRequestDto>()).Returns(familia);
-            _familiaRepositorio.CadastrarNova(Arg.Any<Familia>());
+            _familiaRepositorio.Salvar(Arg.Any<Familia>());
             _cadastraFamilia.Cadastrar(familiaDto);
 
-            _familiaRepositorio.Received(1).CadastrarNova(Arg.Is<Familia>(familia =>
+            _familiaRepositorio.Received(1).Salvar(Arg.Is<Familia>(familia =>
                                 familia.NomeDoResponsavel == familiaDto.NomeDoResponsavel &&
                                 familia.Cpf_responsavel == familiaDto.Cpf_responsavel &&
                                 familia.RendaTotalDaFamilia ==  familiaDto.RendaTotalDaFamilia &&
