@@ -7,21 +7,23 @@ namespace Projeto.Dominio.Pontuacoes
         public virtual int Id { get; protected set; }
         public virtual int Pontos { get; protected set; }
         public virtual DateTime DataDeRegistroDaSolicitacao { get; protected set; }
-        public virtual Familia Familia { get; protected set; }
+       /* public virtual Familia Familia { get; protected set; }*/
 
-        public Pontuacao()
+        protected Pontuacao() { }
+        public Pontuacao(int pontos)
         {
+            Pontos = pontos;
             DataDeRegistroDaSolicitacao = DateTime.Now;
         }
 
         public virtual void AdicionarPontos(int pontos)
         {
-            Pontos += pontos;
+            Pontos = pontos;
         }
 
-        public virtual void AtribuiFamilia(Familia familia)
+        /*public virtual void AtribuiFamilia(Familia familia)
         {
             Familia = familia;
-        }
+        }*/
     }
 }

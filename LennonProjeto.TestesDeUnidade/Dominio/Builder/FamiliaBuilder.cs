@@ -52,8 +52,8 @@ namespace Projeto.TestesDeUnidade.Dominio.Builder
 
         public FamiliaBuilder ComPontos(int pontos)
         {
-            var pontuacao = new Pontuacao();
-            pontuacao.AdicionarPontos(pontos);
+            var pontuacao = new Pontuacao(pontos);
+            //pontuacao.AdicionarPontos(pontos);
             _pontos.Add(pontuacao);
             return this;
         }

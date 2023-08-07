@@ -17,6 +17,7 @@ namespace Projeto.WebApi
             services.AddScoped<IPontuaFamilia, PontuaFamilia>();
             services.AddScoped<IListaFamilia, ListaFamilia>();
             services.AddAutoMapper(typeof(AutoMapperProfile));
+            services.AddScoped<AtualizaFamilia>();
         }
 
     }

@@ -4,8 +4,7 @@ namespace Projeto.Dominio.Familias
 {
     public class Familia
     {
-        private int _id;
-        public virtual int Id { get { return _id; } }
+        public virtual int Id { get; protected set; }
         public virtual string NomeDoResponsavel { get; protected set; }
         public virtual string Telefone { get; protected set; }
         public virtual string Cpf_responsavel { get; protected set; }
@@ -55,13 +54,21 @@ namespace Projeto.Dominio.Familias
         public virtual void AdiconarPontucao(Pontuacao pontuacao)
         {
             _pontos.Add(pontuacao);
-            SetarPontuacao(pontuacao);
+            /*SetarPontuacao(pontuacao);*/
         }
 
-        private void SetarPontuacao(Pontuacao pontuacao)
+        /*private void SetarPontuacao(Pontuacao pontuacao)
         {
             pontuacao.AtribuiFamilia(this);
-        } 
+        } */
+
+        public virtual void AlterarFamilia(Familia familia)
+        {
+            NomeDoResponsavel = familia.NomeDoResponsavel;
+            Telefone = familia.Telefone;
+            RendaTotalDaFamilia = familia.RendaTotalDaFamilia;
+            QuantidadeDeDependentes = familia.QuantidadeDeDependentes;
+        }
         
     }
 }

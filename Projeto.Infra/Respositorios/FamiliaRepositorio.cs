@@ -4,12 +4,8 @@ using Projeto.Dominio.Familias;
 namespace Projeto.Infra
 {
     public class FamiliaRepositorio : RepositorioBaseNh<Familia>, IFamiliaRepositorio 
-    {
-        private readonly ISession _session;
-
-        public FamiliaRepositorio(ISession session) : base(session) 
-        {
-        }
+    {        
+        public FamiliaRepositorio(ISession session) : base(session) { }
 
         public Familia ObterPeloCpfDoResponsavel(string cpf)
         {
@@ -46,7 +42,7 @@ namespace Projeto.Infra
             using var transacao = _session.BeginTransaction();
             try
             {
-                _session.Update(familia);
+                _session.UpdateAsync(familia);
                 transacao.Commit();
             }
             catch

@@ -14,10 +14,10 @@ namespace Projeto.Infra
 
             Map(pontuacao => pontuacao.Pontos).Column("Pontuacao");
             Map(pontuacao => pontuacao.DataDeRegistroDaSolicitacao).Column("RegistroPontuacao");
-            References(pontuacao => pontuacao.Familia)
-                .Column("idFamilia") 
+           /* Map(pontuacao => pontuacao.Familia)
+                .Column("idFamilia")
                 .Cascade.None()
-                .LazyLoad();
+                .LazyLoad();*/
         }
     }
 }

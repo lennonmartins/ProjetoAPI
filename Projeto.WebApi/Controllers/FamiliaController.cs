@@ -10,13 +10,13 @@ namespace Projeto.WebApi.Controllers
     {
         private readonly ICadastraFamilia _cadastraFamilia;
         private readonly AtualizaFamilia _atualizaFamilia;
-       
         private readonly IObtemFamilia _obterFamilia;
 
-        public FamiliaController(ICadastraFamilia cadastraFamilia, IObtemFamilia obtemFamilia)
+        public FamiliaController(ICadastraFamilia cadastraFamilia, IObtemFamilia obtemFamilia, AtualizaFamilia atualizaFamilia)
         {
             _cadastraFamilia = cadastraFamilia;
             _obterFamilia = obtemFamilia;
+            _atualizaFamilia = atualizaFamilia;
         }
 
         [HttpPost, Route("")]
@@ -33,10 +33,10 @@ namespace Projeto.WebApi.Controllers
             return Ok(familiaPontuadaRetornada);
         }
 
-        [HttpPut("/atualizar")]
-        public IActionResult Atualizar([FromBody] FamiliaRequestDto familiaRequestDto)
+        [HttpPut, Route("atualizar")]
+        public IActionResult Atualizar([FromBody] FamiliaRequestDto familiaRequestDto, int id)
         {
-            var familiaAtualizada = _atualizaFamilia.Atualizar(familiaRequestDto);
+            var familiaAtualizada = _atualizaFamilia.Atualizar(familiaRequestDto, id);
             return Ok(familiaAtualizada);
         }
 

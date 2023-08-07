@@ -9,8 +9,7 @@ namespace Projeto.Infra
         {
             Id(familia => familia.Id)
                 .GeneratedBy.Identity()
-                .UnsavedValue(0)
-                .Access.CamelCaseField(Prefix.Underscore);
+                .UnsavedValue(0);
             
             Map(familia => familia.NomeDoResponsavel);
             Map(familia => familia.Telefone);
@@ -19,7 +18,7 @@ namespace Projeto.Infra
             Map(familia => familia.QuantidadeDeDependentes);
             HasMany(familia => familia.Pontos)
                 .KeyColumn("idFamilia")
-                .Cascade.AllDeleteOrphan()
+                .Cascade.All()
                 .LazyLoad();
         }
     }

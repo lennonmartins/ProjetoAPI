@@ -17,7 +17,7 @@ namespace Projeto.Aplicacao.ServicoDePontuacao
         public Familia PontuarPelosCriteriosAtendidos(Familia familia)
         {
             var pontos = _validacaoDeCriterios.ObterQuantidadeDePontos(familia);
-            var pontuacao = new Pontuacao();
+            var pontuacao = new Pontuacao(pontos);
             pontuacao.AdicionarPontos(pontos);
             familia.AdiconarPontucao(pontuacao);
             _familiaRepositorio.Atualizar(familia);
