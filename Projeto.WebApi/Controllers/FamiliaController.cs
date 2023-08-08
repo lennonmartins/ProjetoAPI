@@ -10,16 +10,18 @@ namespace Projeto.WebApi.Controllers
     {
         private readonly ICadastraFamilia _cadastraFamilia;
         private readonly AtualizaFamilia _atualizaFamilia;
-        private readonly IObtemFamilia _obterFamilia;
+        private readonly IObtemFamilia _obtemFamilia;
+        private readonly RemoveFamilia _removeFamilia;
 
-        public FamiliaController(ICadastraFamilia cadastraFamilia, IObtemFamilia obtemFamilia, AtualizaFamilia atualizaFamilia)
+        public FamiliaController(ICadastraFamilia cadastraFamilia, IObtemFamilia obtemFamilia, AtualizaFamilia atualizaFamilia, RemoveFamilia removeFamilia )
         {
             _cadastraFamilia = cadastraFamilia;
-            _obterFamilia = obtemFamilia;
+            _obtemFamilia = obtemFamilia;
             _atualizaFamilia = atualizaFamilia;
+            _removeFamilia = removeFamilia;
         }
 
-        [HttpPost, Route("")]
+        [HttpPost, Route("cadastrar")]
         public IActionResult Cadastrar([FromBody] FamiliaRequestDto familiaRequestDto)
         {
             var familiaCadastrada = _cadastraFamilia.Cadastrar(familiaRequestDto);
@@ -29,7 +31,7 @@ namespace Projeto.WebApi.Controllers
         [HttpGet("porCpf/{cpfDoResponsavel}")]
         public IActionResult BuscarPeloCpfDoResponsavel(string cpfDoResponsavel)
         {
-            var familiaPontuadaRetornada = _obterFamilia.ObterComPontuacaoPeloCpfDoResponsavel(cpfDoResponsavel);
+            var familiaPontuadaRetornada = _obtemFamilia.ObterComPontuacaoPeloCpfDoResponsavel(cpfDoResponsavel);
             return Ok(familiaPontuadaRetornada);
         }
 
@@ -38,6 +40,13 @@ namespace Projeto.WebApi.Controllers
         {
             var familiaAtualizada = _atualizaFamilia.Atualizar(familiaRequestDto, id);
             return Ok(familiaAtualizada);
+        }
+
+        [HttpDelete, Route("remover")]
+        public IActionResult Remover(int id)
+        {
+            _removeFamilia.Remover(id);
+            return Ok();
         }
 
     }

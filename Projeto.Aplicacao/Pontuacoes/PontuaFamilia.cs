@@ -18,7 +18,6 @@ namespace Projeto.Aplicacao.ServicoDePontuacao
         {
             var pontos = _validacaoDeCriterios.ObterQuantidadeDePontos(familia);
             var pontuacao = new Pontuacao(pontos);
-            pontuacao.AdicionarPontos(pontos);
             familia.AdiconarPontucao(pontuacao);
             _familiaRepositorio.Atualizar(familia);
             return familia;

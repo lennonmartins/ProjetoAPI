@@ -4,7 +4,7 @@
     {
         void Salvar(T entidade);
         void Atualizar(T entidade);
-        void Deletar(T entidade);
+        void Remover(T entidade);
         IEnumerable<T> ObterTodas();
         T ObterPor(int id);
     }

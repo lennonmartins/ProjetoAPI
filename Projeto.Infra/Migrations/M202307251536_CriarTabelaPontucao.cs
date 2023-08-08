@@ -1,6 +1,4 @@
 ﻿using FluentMigrator;
-using Projeto.Dominio.Pontuacoes;
-using System.Data.SqlServerCe;
 
 namespace Projeto.Infra.Migrations
 {
@@ -15,9 +13,6 @@ namespace Projeto.Infra.Migrations
 
         public override void Up()
         {
-            Delete.Table("FamiliaPontuacao");
-            Delete.Table("Pontuacao");
-
             Create.Table(NomeDaTabela)
                     .WithColumn(ColunaId).AsInt32().PrimaryKey().Identity()
                     .WithColumn(ColunaPontuacao).AsInt32().Nullable()

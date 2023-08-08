@@ -18,6 +18,7 @@ namespace Projeto.WebApi
             services.AddScoped<IListaFamilia, ListaFamilia>();
             services.AddAutoMapper(typeof(AutoMapperProfile));
             services.AddScoped<AtualizaFamilia>();
+            services.AddScoped<RemoveFamilia>();
         }
 
     }

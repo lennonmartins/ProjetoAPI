@@ -15,15 +15,5 @@ namespace Projeto.Dominio.Pontuacoes
             Pontos = pontos;
             DataDeRegistroDaSolicitacao = DateTime.Now;
         }
-
-        public virtual void AdicionarPontos(int pontos)
-        {
-            Pontos = pontos;
-        }
-
-        /*public virtual void AtribuiFamilia(Familia familia)
-        {
-            Familia = familia;
-        }*/
     }
 }

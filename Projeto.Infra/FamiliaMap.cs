@@ -17,6 +17,7 @@ namespace Projeto.Infra
             Map(familia => familia.RendaTotalDaFamilia);
             Map(familia => familia.QuantidadeDeDependentes);
             HasMany(familia => familia.Pontos)
+                .Access.CamelCaseField(Prefix.Underscore)
                 .KeyColumn("idFamilia")
                 .Cascade.All()
                 .LazyLoad();
