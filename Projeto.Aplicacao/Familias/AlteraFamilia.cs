@@ -4,16 +4,16 @@ using Projeto.Dominio.Familias;
 
 namespace Projeto.Aplicacao.Familias
 {
-    public  class AtualizaFamilia
+    public  class AlteraFamilia
     {
         private readonly IFamiliaRepositorio _familiaRepositorio;
         private readonly IMapper _mapper;
-        public AtualizaFamilia(IFamiliaRepositorio familiaRepositorio, IMapper mapper) 
+        public AlteraFamilia(IFamiliaRepositorio familiaRepositorio, IMapper mapper) 
         {
             _mapper = mapper;   
             _familiaRepositorio = familiaRepositorio;
         }
-        public Familia Atualizar(FamiliaRequestDto familiaRequest, int id)
+        public Familia Altera(FamiliaRequestDto familiaRequest, int id)
         {
             var familiaParaAlterar = _familiaRepositorio.ObterPor(id);
             var familiaMapeada = _mapper.Map<Familia>(familiaRequest);

@@ -12,12 +12,12 @@ namespace Projeto.WebApi
             services.AddScoped<IFamiliaRepositorio, FamiliaRepositorio>();
             services.AddScoped<ICadastraFamilia, CadastraFamilia>();
             services.AddScoped<GerenciadorDeCriterios>();
-            services.AddScoped<ValidacaoDeCriteriosAtendidos>();
+            services.AddScoped<CalculaPontosPorCriterios>();
             services.AddScoped<IObtemFamilia, ObtemFamilia>();
             services.AddScoped<IPontuaFamilia, PontuaFamilia>();
             services.AddScoped<IListaFamilia, ListaFamilia>();
             services.AddAutoMapper(typeof(AutoMapperProfile));
-            services.AddScoped<AtualizaFamilia>();
+            services.AddScoped<AlteraFamilia>();
             services.AddScoped<RemoveFamilia>();
         }
 

@@ -2,16 +2,16 @@
 
 namespace Projeto.Aplicacao.ServicoDePontuacao
 {
-    public class ValidacaoDeCriteriosAtendidos
+    public class CalculaPontosPorCriterios
     {
        private readonly GerenciadorDeCriterios _criterios;
        
-       public ValidacaoDeCriteriosAtendidos(GerenciadorDeCriterios criterios)
+       public CalculaPontosPorCriterios(GerenciadorDeCriterios criterios)
         {
             _criterios = criterios;
         }
 
-        public int ObterQuantidadeDePontos(Familia familia)
+        public int CalcularQuantidadeDePontos(Familia familia)
         {
             int pontos = 0;
             var criterios = _criterios.ObterCriterioSetados();

@@ -9,11 +9,11 @@ namespace Projeto.WebApi.Controllers
     public class FamiliaController : ControllerBase
     {
         private readonly ICadastraFamilia _cadastraFamilia;
-        private readonly AtualizaFamilia _atualizaFamilia;
+        private readonly AlteraFamilia _atualizaFamilia;
         private readonly IObtemFamilia _obtemFamilia;
         private readonly RemoveFamilia _removeFamilia;
 
-        public FamiliaController(ICadastraFamilia cadastraFamilia, IObtemFamilia obtemFamilia, AtualizaFamilia atualizaFamilia, RemoveFamilia removeFamilia )
+        public FamiliaController(ICadastraFamilia cadastraFamilia, IObtemFamilia obtemFamilia, AlteraFamilia atualizaFamilia, RemoveFamilia removeFamilia )
         {
             _cadastraFamilia = cadastraFamilia;
             _obtemFamilia = obtemFamilia;
@@ -38,7 +38,7 @@ namespace Projeto.WebApi.Controllers
         [HttpPut, Route("atualizar")]
         public IActionResult Atualizar([FromBody] FamiliaRequestDto familiaRequestDto, int id)
         {
-            var familiaAtualizada = _atualizaFamilia.Atualizar(familiaRequestDto, id);
+            var familiaAtualizada = _atualizaFamilia.Altera(familiaRequestDto, id);
             return Ok(familiaAtualizada);
         }
 

@@ -5,10 +5,10 @@ namespace Projeto.Aplicacao.ServicoDePontuacao
 {
     public class PontuaFamilia : IPontuaFamilia
     {
-        private readonly ValidacaoDeCriteriosAtendidos _validacaoDeCriterios;  
+        private readonly CalculaPontosPorCriterios _validacaoDeCriterios;  
         private readonly IFamiliaRepositorio _familiaRepositorio;
         
-        public PontuaFamilia(ValidacaoDeCriteriosAtendidos validacao, IFamiliaRepositorio familiaRepositorio)
+        public PontuaFamilia(CalculaPontosPorCriterios validacao, IFamiliaRepositorio familiaRepositorio)
         {
             _validacaoDeCriterios = validacao;
             _familiaRepositorio = familiaRepositorio;
@@ -16,7 +16,7 @@ namespace Projeto.Aplicacao.ServicoDePontuacao
 
         public Familia PontuarPelosCriteriosAtendidos(Familia familia)
         {
-            var pontos = _validacaoDeCriterios.ObterQuantidadeDePontos(familia);
+            var pontos = _validacaoDeCriterios.CalcularQuantidadeDePontos(familia);
             var pontuacao = new Pontuacao(pontos);
             familia.AdiconarPontucao(pontuacao);
             _familiaRepositorio.Atualizar(familia);

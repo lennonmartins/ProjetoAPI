@@ -35,7 +35,7 @@ namespace Projeto.TestesDeUnidade.Aplicacao
                 RendaTotalDaFamilia = 1500
             };
             var familia = new FamiliaBuilder()
-                    .ComNome(familiaDto.NomeDoResponsavel)
+                    .ComResponsavel(familiaDto.NomeDoResponsavel)
                     .ComCpf(familiaDto.Cpf_responsavel)
                     .ComTelefone(familiaDto.Telefone)
                     .ComRenda(familiaDto.RendaTotalDaFamilia)

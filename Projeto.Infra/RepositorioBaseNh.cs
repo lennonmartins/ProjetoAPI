@@ -13,7 +13,16 @@ namespace Projeto.Infra
 
         public void Remover(T entidade)
         {
-            _session.Delete(entidade);
+            using var transacao = _session.BeginTransaction();
+            try
+            {
+                _session.Delete(entidade);
+                transacao.Commit();
+            }
+            catch(Exception) 
+            {
+                throw;
+            }
         }
 
         public T ObterPor(int id) 

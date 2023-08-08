@@ -20,6 +20,7 @@ namespace Projeto.Infra
                 .Access.CamelCaseField(Prefix.Underscore)
                 .KeyColumn("idFamilia")
                 .Cascade.All()
+                .Inverse()
                 .LazyLoad();
         }
     }

@@ -44,7 +44,7 @@ namespace Projeto.TestesDeUnidade.Dominio.Builder
             return this;
         }
 
-        public FamiliaBuilder ComNome(string nome)
+        public FamiliaBuilder ComResponsavel(string nome)
         {
             NomeDoResponsavel = nome;   
             return this;
@@ -53,7 +53,6 @@ namespace Projeto.TestesDeUnidade.Dominio.Builder
         public FamiliaBuilder ComPontos(int pontos)
         {
             var pontuacao = new Pontuacao(pontos);
-            //pontuacao.AdicionarPontos(pontos);
             _pontos.Add(pontuacao);
             return this;
         }
