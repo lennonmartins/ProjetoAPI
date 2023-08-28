@@ -51,3 +51,6 @@ packages/
 *.temp
 
 .vs/
+.vscode/
+Projeto.WebApi/appsettings.json
+Projeto.WebApi/appsettings.Development.json
