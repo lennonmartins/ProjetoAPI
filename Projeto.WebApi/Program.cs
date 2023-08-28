@@ -51,7 +51,12 @@ public class Program
 
     private static void ConfigurarMigracao(IServiceCollection services)
     {
-        var connStr = @"Server=localhost;Database=ProjetoLennon;User Id=sa;Password=PapelZero.123;";
+        IConfiguration configuracao = new ConfigurationBuilder()
+            .SetBasePath(Directory.GetCurrentDirectory())
+            .AddJsonFile("appsettings.json")
+            .Build();
+
+        var connStr = configuracao.GetConnectionString("DefaultConnection");
 
         var serviceProvider = new ServiceCollection()
             .AddFluentMigratorCore()
