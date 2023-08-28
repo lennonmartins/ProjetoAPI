@@ -24,8 +24,8 @@
 *.vcxproj
 *.shproj
 *.njsproj
-*.appsettings.json
-*.appsettings.Development.json
+Projeto.WebApi\appsettings.json
+Projeto.WebApi\appsettings.Development.json
 
 
 **/bin/
