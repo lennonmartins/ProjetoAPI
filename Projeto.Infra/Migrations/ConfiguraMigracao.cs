@@ -1,4 +1,5 @@
 ﻿using FluentMigrator.Runner;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
@@ -8,7 +9,13 @@ namespace Projeto.Infra.Migrations
     {
         public static void ConfigurarMigracao()
         {
-            var connStr = @"Server=localhost;Database=ProjetoLennon;User Id=sa;Password=PapelZero.123;";
+
+            IConfiguration configuracao = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json")
+                .Build();
+
+            var connStr = configuracao.GetConnectionString("DefaultConnection");
 
             var serviceProvider = new ServiceCollection()
                 .AddFluentMigratorCore()

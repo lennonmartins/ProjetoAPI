@@ -24,6 +24,9 @@
 *.vcxproj
 *.shproj
 *.njsproj
+*./appsettings.json
+*./appsettings.Development.json
+
 
 **/bin/
 **/obj/

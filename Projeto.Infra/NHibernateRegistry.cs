@@ -1,14 +1,16 @@
 ﻿using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Projeto.Infra
 {
     public static class NHibernateRegistry 
     {
-        public static void  ObterSessionFactory(IServiceCollection services)
-        {
-            var connStr = @"Server=localhost;Database=ProjetoLennon;User Id=sa;Password=PapelZero.123;";
+        public static void  ObterSessionFactory(IServiceCollection services) { 
+            IConfiguration configuracao = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json").Build();
+
+            var connStr = configuracao.GetConnectionString("DefaultConnection");
 
             var sessionFactory = Fluently.Configure()
                 .Database(MsSqlConfiguration.MsSql2012.ConnectionString(connStr))

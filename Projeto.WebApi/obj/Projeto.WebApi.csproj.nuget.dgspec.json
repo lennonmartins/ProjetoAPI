@@ -194,6 +194,14 @@
               "target": "Package",
               "version": "[3.2.1, )"
             },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "NHibernate": {
               "target": "Package",
               "version": "[5.4.2, )"
